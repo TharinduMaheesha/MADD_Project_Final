@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">GiftME</string>
+    <string name="name">enter name of the reciever</string>
+    <string name="Address">address</string>
+    <string name="Phone">phone number (10)</string>
+    <string name="Items">items</string>
+    <string name="Price">price</string>
+    <string name="price">total price</string>
+    <string name="boyid">delivery boy\'s id</string>
+    <string name="date">date</string>
+    <string name="email">email (example@gmail.com)</string>
+    <string name="age">age</string>
+    <string name="bikeNumber">vehicle number</string>
+    <string name="NIC">NIC (10 Characters with V)</string>
+    <string name="DrivingLisonNumber">driving lison number</string>
+</resources>

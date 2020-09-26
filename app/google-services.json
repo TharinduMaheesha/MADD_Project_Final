@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "608689937528",
+    "firebase_url": "https://giftme-faa91.firebaseio.com",
+    "project_id": "giftme-faa91",
+    "storage_bucket": "giftme-faa91.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:608689937528:android:9c9832946ceb9ab1c4618d",
+        "android_client_info": {
+          "package_name": "com.example.giftme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "608689937528-fmmp8hb7vipgg4qc7435riquandoatge.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBXVsSIv21qo-a1u445mewv10qZ-C9QJs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "608689937528-fmmp8hb7vipgg4qc7435riquandoatge.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
