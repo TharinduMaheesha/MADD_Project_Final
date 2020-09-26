@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "246144363735",
+    "firebase_url": "https://madd-51e6a.firebaseio.com",
+    "project_id": "madd-51e6a",
+    "storage_bucket": "madd-51e6a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:246144363735:android:d4ab498b68262fdec89492",
+        "android_client_info": {
+          "package_name": "com.example.lakshiapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "246144363735-fsm8j5llsdreo3kfhappecjsmmt3ha24.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4I4EZ3Jj46V01V6ZOKZPZaQxPNMrjXVQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "246144363735-fsm8j5llsdreo3kfhappecjsmmt3ha24.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:246144363735:android:ae27df861f48d7b5c89492",
+        "android_client_info": {
+          "package_name": "com.example.madd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "246144363735-fsm8j5llsdreo3kfhappecjsmmt3ha24.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4I4EZ3Jj46V01V6ZOKZPZaQxPNMrjXVQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "246144363735-fsm8j5llsdreo3kfhappecjsmmt3ha24.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:246144363735:android:050956e62f62d663c89492",
+        "android_client_info": {
+          "package_name": "com.example.madd_giftme_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "246144363735-fsm8j5llsdreo3kfhappecjsmmt3ha24.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4I4EZ3Jj46V01V6ZOKZPZaQxPNMrjXVQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "246144363735-fsm8j5llsdreo3kfhappecjsmmt3ha24.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
