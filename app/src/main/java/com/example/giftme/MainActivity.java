@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        getSupportActionBar().setTitle("GiftME Delivery Administrator");
 
         txtName=(EditText) findViewById(R.id.txtName);
         address=(EditText) findViewById(R.id.address);
@@ -96,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Please enter date", Toast.LENGTH_LONG).show();
                 }
                 else {
+
                     double priceD = Double.parseDouble(price.getText().toString().trim());
 
                     delivery.setName(txtName.getText().toString().trim());
@@ -121,20 +123,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btntest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                test();
-            }
-        });
     }
     public void openNext(){
         Intent intent= new Intent(this,MainActivity2.class);
                 startActivity(intent);
     }
-    public void test(){
-        Intent intent= new Intent(this,SignUp.class);
-        startActivity(intent);
-    }
+
 
 }

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back"
+    android:background="@drawable/mad"
+    android:textAlignment="textStart"
     tools:context=".MainActivity2">
 
     <ScrollView
@@ -12,61 +13,84 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="1dp"
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent">
-
-
-        <Button
-            android:id="@+id/btnAdd"
+        <LinearLayout
+            android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="150dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/input_design"
-            android:backgroundTint="#1191F6"
-            android:text="Add New Rider"
-            android:textColor="#FFFFFF" />
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent">
 
-        <Button
-            android:id="@+id/btnView"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/input_design"
-            android:backgroundTint="#324CDD"
-            android:text="View All Riders"
-            android:textColor="#FFFFFF" />
 
-        <Button
-            android:id="@+id/btn3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="100dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginRight="100dp"
-            android:background="@drawable/input_design"
-            android:backgroundTint="#717070"
-            android:text="Back"
-            android:textColor="#FFFFFF" />
-    </LinearLayout>
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="200dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/input_design"
+                android:backgroundTint="#1191F6"
+                android:drawableLeft="@android:drawable/ic_input_add"
+                android:drawablePadding="@dimen/text_margin"
+                android:text="Add New Rider"
+                android:textAlignment="textStart"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold|italic" />
+
+
+            <Button
+                android:id="@+id/btnView"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/input_design"
+                android:backgroundTint="#324CDD"
+                android:drawableLeft="@android:drawable/ic_menu_sort_by_size"
+                android:text="View All Riders"
+                android:textAlignment="viewStart"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold|italic" />
+
+            <Button
+                android:id="@+id/btnupdel"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/input_design"
+                android:backgroundTint="#1191F6"
+                android:drawableLeft="@android:drawable/ic_menu_manage"
+                android:text="Update or Remove Rider "
+                android:textAlignment="viewStart"
+                android:textColor="#FFFFFF"
+                android:textStyle="normal|italic" />
+
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="100dp"
+                android:background="@drawable/input_design"
+                android:backgroundTint="#717070"
+                android:text="Back"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
 
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

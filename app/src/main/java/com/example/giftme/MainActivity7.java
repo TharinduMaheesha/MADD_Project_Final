@@ -48,15 +48,12 @@ public class MainActivity7 extends AppCompatActivity {
                     Toast.makeText(MainActivity7.this,"please enter password",Toast.LENGTH_LONG).show();
                     return;
                 }
-                if(pwd.length()<6){
-                    Toast.makeText(MainActivity7.this,"password too short",Toast.LENGTH_LONG).show();
-                }
-
-                firebaseAuth.signInWithEmailAndPassword(email,pwd).addOnCompleteListener(MainActivity7.this, new OnCompleteListener<AuthResult>() {
+                firebaseAuth.signInWithEmailAndPassword(email,pwd).addOnCompleteListener(MainActivity7.this,new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                            startActivity(new Intent(getApplicationContext(),DeliveryHistory.class));
+                            Toast.makeText(MainActivity7.this,"Login successfully",Toast.LENGTH_LONG).show();
                         }
                         else {
                                 Toast.makeText(MainActivity7.this,"Login is failed try again",Toast.LENGTH_LONG).show();

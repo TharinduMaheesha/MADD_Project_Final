@@ -24,6 +24,7 @@ public class MainActivity6 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main6);
+        getSupportActionBar().setTitle("GiftME Delivery Administrator");
 
         myListView = findViewById(R.id.listview1);
         riderList = new ArrayList<>();

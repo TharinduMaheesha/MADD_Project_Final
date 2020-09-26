@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -16,6 +17,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.regex.Pattern;
+
 public class MainActivity4 extends AppCompatActivity {
     Button reg,backto;
     DatabaseReference DBref;
@@ -26,6 +29,7 @@ public class MainActivity4 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
+        getSupportActionBar().setTitle("GiftME Delivery Administrator");
 
         name = (EditText) findViewById(R.id.nameD);
         address = (EditText) findViewById(R.id.addressD);
@@ -77,6 +81,11 @@ public class MainActivity4 extends AppCompatActivity {
                         }
                         else if(txt_email.isEmpty()){
                             Toast.makeText(MainActivity4.this, "Please enter email !", Toast.LENGTH_LONG).show();
+                        }
+                        else if(Patterns.EMAIL_ADDRESS.matcher(txt_email).matches()){
+                            email.setError("Email is not valid");
+                            email.requestFocus();
+                            return;
                         }
                         else if(txt_age.length()<2) {
                             Toast.makeText(MainActivity4.this, "Please enter age !", Toast.LENGTH_LONG).show();

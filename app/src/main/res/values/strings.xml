@@ -13,4 +13,7 @@
     <string name="bikeNumber">vehicle number</string>
     <string name="NIC">NIC (10 Characters with V)</string>
     <string name="DrivingLisonNumber">driving lison number</string>
+    <string name="title_activity_updel">updel</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
 </resources>

@@ -144,7 +144,6 @@
                 android:inputType="date"
                 android:textSize="15dp" />
 
-
             <Button
                 android:id="@+id/btn1"
                 android:layout_width="match_parent"

@@ -10,14 +10,16 @@ import android.widget.Toast;
 
 public class MainActivity2 extends AppCompatActivity {
 
-    Button button1,button2,button3;
+    Button button1,button2,button4,button3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+        getSupportActionBar().setTitle("GiftME Delivery Administrator");
 
         button1=(Button)findViewById(R.id.btnAdd);
         button2=(Button)findViewById(R.id.btnView);
+        button4=(Button)findViewById(R.id.btnupdel);
         button3=(Button)findViewById(R.id.btn3);
 
         button1.setOnClickListener(new View.OnClickListener() {
@@ -39,6 +41,13 @@ public class MainActivity2 extends AppCompatActivity {
                 goback();
             }
         });
+
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                updateDelete();
+            }
+        });
     }
 
     public void openAddRider(){
@@ -51,11 +60,18 @@ public class MainActivity2 extends AppCompatActivity {
         startActivity(intent2);
         Toast.makeText(MainActivity2.this,"All riders are here",Toast.LENGTH_LONG).show();
     }
+    public void updateDelete(){
+        Intent intent= new Intent(this,updateDelete.class);
+        startActivity(intent);
+        Toast.makeText(MainActivity2.this, "update or delete rider", Toast.LENGTH_LONG).show();
+    }
     public void goback(){
         Intent intent= new Intent(this,MainActivity.class);
         startActivity(intent);
-        Toast.makeText(MainActivity2.this, "<< One page back ", Toast.LENGTH_LONG).show();
+        Toast.makeText(MainActivity2.this, "<< One page back", Toast.LENGTH_LONG).show();
     }
+
+
 
 }
 

@@ -20,7 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class SignUp extends AppCompatActivity {
 
     EditText txt_email,txt_pwd,txt_cpwd;
-    Button ButtonSignup;
+    Button ButtonSignup,ButtonLogin;
     ProgressBar progressBar;
     private FirebaseAuth firebaseAuth;
     @Override
@@ -32,6 +32,7 @@ public class SignUp extends AppCompatActivity {
         txt_pwd=(EditText)findViewById(R.id.pass);
         txt_cpwd=(EditText)findViewById(R.id.confirm);
         ButtonSignup=(Button)findViewById(R.id.btnsignup);
+        ButtonLogin=(Button)findViewById(R.id.button2);
         progressBar=(ProgressBar)findViewById(R.id.progressBar);
 
         firebaseAuth=FirebaseAuth.getInstance();
@@ -79,5 +80,16 @@ public class SignUp extends AppCompatActivity {
             }
         });
 
+        ButtonLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openLogin();
+            }
+        });
+    }
+    public void openLogin(){
+        Intent intent4= new Intent(this,MainActivity7.class);
+        startActivity(intent4);
+        Toast.makeText(SignUp.this, "Login here",Toast.LENGTH_LONG).show();
     }
 }
