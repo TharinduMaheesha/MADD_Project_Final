@@ -14,26 +14,36 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Customer_Occassion_products"
-            android:theme="@style/AppTheme.NoActionBar"
-            ></activity>
+        <activity android:name=".Admin_edit_product"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".Admin_add_new_product"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".Admin_products"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Admin_home"
+            android:theme="@style/AppTheme.NoActionBar" >  <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter></activity>
+        <activity
+            android:name=".Customer_Occassion_products"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ConfirmFinalOrder" />
         <activity android:name=".AdminAddNewProductsToOccasions" />
         <activity
             android:name=".CartActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ViewProductDetails"
-            android:theme="@style/AppTheme.NoActionBar"
-            />
+        <activity
+            android:name=".ViewProductDetails"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".display_product_test"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Home"
             android:label="@string/title_activity_home"
@@ -46,13 +56,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".StartingActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".AdminCategory" />
     </application>
 

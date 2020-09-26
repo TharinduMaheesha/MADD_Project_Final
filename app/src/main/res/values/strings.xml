@@ -200,4 +200,25 @@
     <string name="title_activity_gift_m_e_home">GiftME_home</string>
     <string name="Select">Choose An Occasion</string>
     <string name="productDets">Product Details</string>
+    <string name="click">Click Below To Add An Image</string>
+    <string name="entername">Enter Item Name</string>
+    <string name="enterprice">Enter Item Price</string>
+    <string name="occasion">Occasion</string>
+    <string name="availabale">Availaility</string>
+
+
+    <string-array name="events">
+        <item>Valentines Day</item>
+        <item>Birthdays</item>
+        <item>Promotions</item>
+        <item>Parties</item>
+        <item>Bridal Shower</item>
+        <item>Weddings</item>
+        <item>Other</item>
+
+    </string-array>
+    <string-array name="prodStatus">
+        <item>Available</item>
+        <item>Not Available</item>
+    </string-array>
 </resources>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        app:cardBackgroundColor="#CFCECE">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/TV_ADMIN_PRODUCT_NAME"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/text_product1"
+                android:textAlignment="viewStart"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="normal|bold|italic" />
+
+            <ImageView
+                android:id="@+id/IV_ADMIN_PRODUCT_IMAGE"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_below="@+id/TV_ADMIN_PRODUCT_NAME"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/cake" />
+
+            <TextView
+                android:id="@+id/TV_ADMIN_PRODUCT_EVENT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/IV_ADMIN_PRODUCT_IMAGE"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/selectOcassion"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="normal|bold|italic" />
+
+            <TextView
+                android:id="@+id/TV_ADMIN_AVAILABILITY"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TV_ADMIN_PRODUCT_EVENT"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/Available"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="normal|bold|italic" />
+
+            <LinearLayout
+                android:id="@+id/LNPRODUCTSADMIN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/TV_ADMIN_AVAILABILITY"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_admin_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2.5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttons"
+                    android:backgroundTint="#0054BA"
+                    android:text="@string/editProd"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="normal|bold" />
+
+                <Button
+                    android:id="@+id/btn_admin_remove"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2.5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttons"
+                    android:backgroundTint="#0054BA"
+                    android:text="@string/removeProd"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="normal|bold" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
