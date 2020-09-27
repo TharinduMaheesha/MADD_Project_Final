@@ -15,6 +15,7 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.madd_giftme_app.BlankFragment;
 import com.example.madd_giftme_app.Customer_Occassion_products;
 import com.example.madd_giftme_app.R;
 
@@ -51,8 +52,102 @@ public class OccasionsFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                event = "Valentines Day";
-                something(event);
+                BlankFragment frag = new BlankFragment();
+                Bundle bundle = new Bundle();
+                bundle.putString("event" , "valentines Day");
+                frag.setArguments(bundle);
+                FragmentManager manager = getFragmentManager();
+                manager.beginTransaction().replace(R.id.nav_host_fragment,frag).commit();
+
+
+            }
+        });
+        occasion2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                BlankFragment frag = new BlankFragment();
+                Bundle bundle = new Bundle();
+                bundle.putString("event" , "birthdays");
+                frag.setArguments(bundle);
+
+                FragmentManager manager = getFragmentManager();
+                manager.beginTransaction().replace(R.id.nav_host_fragment,frag).commit();
+
+
+            }
+        });
+        occasion3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                BlankFragment frag = new BlankFragment();
+                Bundle bundle = new Bundle();
+                bundle.putString("event" , "Weddings");
+                frag.setArguments(bundle);
+
+                FragmentManager manager = getFragmentManager();
+                manager.beginTransaction().replace(R.id.nav_host_fragment,frag).commit();
+
+
+            }
+        });
+        occasion4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                BlankFragment frag = new BlankFragment();
+                Bundle bundle = new Bundle();
+                bundle.putString("event" , "promotions");
+                frag.setArguments(bundle);
+
+                FragmentManager manager = getFragmentManager();
+                manager.beginTransaction().replace(R.id.nav_host_fragment,frag).commit();
+
+
+            }
+        });
+        occasion5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                BlankFragment frag = new BlankFragment();
+                Bundle bundle = new Bundle();
+                bundle.putString("event" , "parties");
+                frag.setArguments(bundle);
+
+                FragmentManager manager = getFragmentManager();
+                manager.beginTransaction().replace(R.id.nav_host_fragment,frag).commit();
+
+
+            }
+        });
+        occasion6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                BlankFragment frag = new BlankFragment();
+                Bundle bundle = new Bundle();
+                bundle.putString("event" , "Bridal Shower");
+                frag.setArguments(bundle);
+
+                FragmentManager manager = getFragmentManager();
+                manager.beginTransaction().replace(R.id.nav_host_fragment,frag).commit();
+
+
+            }
+        });
+        other.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                BlankFragment frag = new BlankFragment();
+                Bundle bundle = new Bundle();
+                bundle.putString("event" , "Other");
+                frag.setArguments(bundle);
+
+                FragmentManager manager = getFragmentManager();
+                manager.beginTransaction().replace(R.id.nav_host_fragment,frag).commit();
 
 
             }

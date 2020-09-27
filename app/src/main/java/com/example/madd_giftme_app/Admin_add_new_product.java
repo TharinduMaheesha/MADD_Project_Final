@@ -62,7 +62,7 @@ public class Admin_add_new_product extends AppCompatActivity {
         home = findViewById(R.id.btnHome);
         account = findViewById(R.id.btnAccount);
         products = findViewById(R.id.btnProducts);
-        orders = findViewById(R.id.btnProducts);
+        orders = findViewById(R.id.btnOrders);
 
         products.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,6 +75,14 @@ public class Admin_add_new_product extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(Admin_add_new_product.this,Admin_home.class);
+                startActivity(i);
+            }
+        });
+
+        orders.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Admin_add_new_product.this,Admin_order_home.class);
                 startActivity(i);
             }
         });

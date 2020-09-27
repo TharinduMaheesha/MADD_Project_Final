@@ -8,9 +8,11 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.madd_giftme_app.BlankFragment;
 import com.example.madd_giftme_app.Model.Products;
 import com.example.madd_giftme_app.R;
 import com.example.madd_giftme_app.ViewHolder.ProductViewHolder;
@@ -74,11 +76,15 @@ public class HomeFragment extends Fragment {
                             @Override
                             public void onClick(View view) {
 
-                                Intent intent = new Intent(getContext(), ViewProductDetails.class);
-                                intent.putExtra("pid", model.getProduct_id());
-                                intent.putExtra("price", model.getProduct_price());
 
-                                startActivity(intent);
+                                ViewProductDetails frag = new ViewProductDetails();
+                                Bundle bundle = new Bundle();
+                                bundle.putString("pid" , model.getProduct_id());
+                                bundle.putString("price", model.getProduct_price());
+                                frag.setArguments(bundle);
+
+                                FragmentManager manager = getFragmentManager();
+                                manager.beginTransaction().replace(R.id.nav_host_fragment,frag).commit();
 
                             }
                         });

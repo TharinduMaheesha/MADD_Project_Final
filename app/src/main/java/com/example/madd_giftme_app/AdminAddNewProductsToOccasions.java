@@ -82,6 +82,8 @@ public class AdminAddNewProductsToOccasions extends AppCompatActivity {
             }
         });
 
+
+
     }
 
     private void OpenGallery() {

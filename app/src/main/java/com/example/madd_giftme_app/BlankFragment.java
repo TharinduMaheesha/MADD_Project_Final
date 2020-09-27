@@ -1,13 +1,16 @@
 package com.example.madd_giftme_app;
 
+import android.os.Bundle;
+
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,14 +18,14 @@ import android.widget.TextView;
 
 import com.example.madd_giftme_app.Model.Products;
 import com.example.madd_giftme_app.ViewHolder.OccasionProcductViewHolder;
+import com.example.madd_giftme_app.ui.occasions.OccasionsViewModel;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
-public class Customer_Occassion_products extends Fragment {
-
+public class BlankFragment extends Fragment {
     private TextView occasion;
     private String event;
     private DatabaseReference ref ;
@@ -30,30 +33,26 @@ public class Customer_Occassion_products extends Fragment {
     RecyclerView.LayoutManager layoutManager;
     private View view ;
 
-
-
-
+    private OccasionsViewModel occasionsViewModel;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-       view= inflater.inflate(R.layout.activity_customer__occassion_products, container, false);
+        view = inflater.inflate(R.layout.fragment_blank, container, false);
 
         ref = FirebaseDatabase.getInstance().getReference().child("Products");
-        recyclerView = view.findViewById(R.id.ocasionProductsRecycler);
+        recyclerView =(RecyclerView) view.findViewById(R.id.ocasionProductsRecycler);
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
 
+        Bundle mBundle ;
+        mBundle = getArguments();
+        event =  mBundle.getString("event");
 
-        Bundle bundle = this.getArguments();
-        if (bundle != null) {
-             event = bundle.getString("event");
-        }
-        event="Promotions";
 
         return view;
     }
+
 
     @Override
     public void onStart() {
@@ -64,7 +63,7 @@ public class Customer_Occassion_products extends Fragment {
             @Override
             protected void onBindViewHolder(@NonNull OccasionProcductViewHolder holder, int position, @NonNull final Products model) {
 
-                if(!model.getProduct_event().equalsIgnoreCase("Promotions") || model.getProduct_availability().equalsIgnoreCase("Not Available")) {
+                if(!model.getProduct_event().equalsIgnoreCase(event) || model.getProduct_availability().equalsIgnoreCase("Not Available")) {
 
                     holder.name.setVisibility(View.GONE);
                     holder.price.setVisibility(View.GONE);
@@ -78,17 +77,22 @@ public class Customer_Occassion_products extends Fragment {
                     holder.price.setText(model.getProduct_price() + " LKR");
                     holder.description.setText(model.getProduct_description());
                     Picasso.get().load(model.getProduct_image()).into(holder.image);
-//                    holder.image.setOnClickListener(new View.OnClickListener() {
-//                        @Override
-//                        public void onClick(View view) {
-//                            Intent i = new Intent(Customer_Occassion_products.this , ViewProductDetails.class);
-//                            i.putExtra("pid" , model.getProduct_id());
-//                            i.putExtra("price", model.getProduct_price());
-//
-//                            startActivity(i);
-//
-//                        }
-//                    });
+                    holder.image.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+
+
+                            ViewProductDetails frag = new ViewProductDetails();
+                            Bundle bundle = new Bundle();
+                            bundle.putString("pid" , model.getProduct_id());
+                            bundle.putString("price", model.getProduct_price());
+                            frag.setArguments(bundle);
+
+                            FragmentManager manager = getFragmentManager();
+                            manager.beginTransaction().replace(R.id.nav_host_fragment,frag).commit();
+
+                        }
+                    });
 
                 }
 

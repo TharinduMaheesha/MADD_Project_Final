@@ -4,7 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Admin_products">
+    tools:context=".Admin_new_orders">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/NEW_ORDER_ADMIN_RECYCLER"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/LNNAV"
+        android:layout_below="@+id/RLHEADER"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="0dp" />
 
     <RelativeLayout
         android:id="@+id/RLHEADER"
@@ -13,43 +23,16 @@
         android:background="#0054BA">
 
         <TextView
-            android:id="@+id/textProducts"
+            android:id="@+id/textView7"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
-            android:text="@string/text_products"
+            android:text="@string/neworder"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="24sp"
             android:textStyle="bold" />
-
     </RelativeLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/adminProductRecycler"
-        android:layout_width="match_parent"
-        android:layout_height="473dp"
-        android:layout_above="@+id/btn_add_new_admin"
-        android:layout_below="@+id/RLHEADER"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="10dp">
-
-    </androidx.recyclerview.widget.RecyclerView>
-
-    <Button
-        android:id="@+id/btn_add_new_admin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/LNNAV"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/buttons_admin"
-        android:backgroundTint="#536DFE"
-        android:text="@string/AddNew"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        android:textStyle="normal|bold" />
 
     <LinearLayout
         android:id="@+id/LNNAV"
@@ -63,6 +46,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:layout_marginTop="5dp"
             android:orientation="horizontal">
 
             <ImageButton
@@ -154,5 +138,6 @@
                 android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
+
 
 </RelativeLayout>

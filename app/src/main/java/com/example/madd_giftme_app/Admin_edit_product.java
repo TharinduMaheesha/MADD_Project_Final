@@ -63,7 +63,7 @@ public class Admin_edit_product extends AppCompatActivity {
         home = findViewById(R.id.btnHome);
         account = findViewById(R.id.btnAccount);
         products = findViewById(R.id.btnProducts);
-        orders = findViewById(R.id.btnProducts);
+        orders = findViewById(R.id.btnOrders);
 
         spinner = findViewById(R.id.spinnerEDITProductOccasion);
         spinner2 = findViewById(R.id.spinnerEDITProductAvailabiity);
@@ -140,6 +140,13 @@ public class Admin_edit_product extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(Admin_edit_product.this,Admin_home.class);
+                startActivity(i);
+            }
+        });
+        orders.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Admin_edit_product.this,Admin_order_home.class);
                 startActivity(i);
             }
         });

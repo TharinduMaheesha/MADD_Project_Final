@@ -35,15 +35,7 @@ public class Home extends AppCompatActivity {
         toolbar.setTitle("Home");
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                Intent intent = new Intent(Home.this, CartActivity.class);
-                startActivity(intent);
-            }
-        });
 
        drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);

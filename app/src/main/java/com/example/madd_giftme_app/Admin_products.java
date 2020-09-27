@@ -42,7 +42,7 @@ public class Admin_products extends AppCompatActivity {
         home = findViewById(R.id.btnHome);
         account = findViewById(R.id.btnAccount);
         products = findViewById(R.id.btnProducts);
-        orders = findViewById(R.id.btnProducts);
+        orders = findViewById(R.id.btnOrders);
 
         ref = FirebaseDatabase.getInstance().getReference().child("Products");
         recyclerView = findViewById(R.id.adminProductRecycler);
@@ -68,6 +68,13 @@ public class Admin_products extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(Admin_products.this,Admin_home.class);
+                startActivity(i);
+            }
+        });
+        orders.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),Admin_order_home.class);
                 startActivity(i);
             }
         });

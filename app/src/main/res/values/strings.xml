@@ -205,6 +205,15 @@
     <string name="enterprice">Enter Item Price</string>
     <string name="occasion">Occasion</string>
     <string name="availabale">Availaility</string>
+    <string name="neworder">New Orders</string>
+    <string name="Accepted">Accepted Orders</string>
+    <string name="Delveries">Deliveries</string>
+    <string name="deli">Deliveries</string>
+    <string name="orderid">"Order ID "</string>
+    <string name="detailsss">Order Details</string>
+    <string name="itemsss">Items</string>
+    <string name="accept">Accept</string>
+    <string name="decline">Decline</string>
 
 
     <string-array name="events">
