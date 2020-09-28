@@ -28,6 +28,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/LNNAV"
         android:layout_below="@+id/RLHEADER"
         android:layout_marginTop="10dp">
 
@@ -45,7 +46,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="5dp"
-                app:cardBackgroundColor="#CAC8C5">
+                app:cardBackgroundColor="#33429E">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -66,7 +67,7 @@
                         android:layout_marginTop="50dp"
                         android:layout_toEndOf="@+id/imageView"
                         android:text="@string/neworder"
-                        android:textColor="#000000"
+                        android:textColor="#F6F0F0"
                         android:textSize="24sp"
                         android:textStyle="bold" />
                 </RelativeLayout>
@@ -80,7 +81,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="5dp"
-                app:cardBackgroundColor="#CAC8C5">
+                app:cardBackgroundColor="#33429E">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -104,7 +105,7 @@
                         android:layout_marginTop="50dp"
                         android:layout_toEndOf="@+id/imageView2"
                         android:text="@string/Accepted"
-                        android:textColor="#000000"
+                        android:textColor="#F6F0F0"
                         android:textSize="24sp"
                         android:textStyle="bold" />
                 </RelativeLayout>
@@ -119,7 +120,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="5dp"
-                app:cardBackgroundColor="#CAC8C5">
+                app:cardBackgroundColor="#33429E">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -143,7 +144,86 @@
                         android:layout_marginTop="50dp"
                         android:layout_toEndOf="@+id/imageView3"
                         android:text="@string/deli"
-                        android:textColor="#000000"
+                        android:textColor="#F6F0F0"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CARD_VIEWPAYMENTS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                app:cardBackgroundColor="#33429E">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp">
+
+                    <ImageView
+                        android:id="@+id/IV_PAYMENTS"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginBottom="25dp"
+                        app:srcCompat="@drawable/pay" />
+
+                    <TextView
+                        android:id="@+id/TV_PAYMENTS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="55dp"
+                        android:layout_marginTop="50dp"
+                        android:layout_toEndOf="@+id/IV_PAYMENTS"
+                        android:text="@string/payments"
+                        android:textColor="#F6F0F0"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CARD_REFUNDS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="#33429E">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/IBKJ"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginBottom="25dp"
+                        app:srcCompat="@drawable/ret" />
+
+                    <TextView
+                        android:id="@+id/TC_REFUNDS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="55dp"
+                        android:layout_marginTop="50dp"
+                        android:layout_toEndOf="@+id/IBKJ"
+                        android:text="@string/refunds"
+                        android:textColor="#F6F0F0"
                         android:textSize="24sp"
                         android:textStyle="bold" />
                 </RelativeLayout>

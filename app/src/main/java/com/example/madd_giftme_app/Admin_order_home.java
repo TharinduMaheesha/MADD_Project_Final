@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class Admin_order_home extends AppCompatActivity {
 
-    CardView cardNew , cardAccepted , cardDelivery;
+    CardView cardNew , cardAccepted , cardDelivery , cardefunds , cardPay;
     ImageButton home , account , products , orders;
 
 
@@ -52,6 +52,9 @@ public class Admin_order_home extends AppCompatActivity {
         cardNew = findViewById(R.id.CARD_NEW_ORDERS);
         cardAccepted = findViewById(R.id.CARD_ACCEPTED_ORDERS);
         cardDelivery = findViewById(R.id.CARD_DELIVERIES);
+        cardPay = findViewById(R.id.CARD_VIEWPAYMENTS);
+        cardefunds = findViewById(R.id.CARD_REFUNDS);
+
 
         cardNew.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,6 +68,27 @@ public class Admin_order_home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(Admin_order_home.this,Admin_accepted_orders.class);
+                startActivity(i);
+            }
+        });
+        cardDelivery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Admin_order_home.this,View_payments.class);
+                startActivity(i);
+            }
+        });
+        cardPay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Admin_order_home.this,View_payments.class);
+                startActivity(i);
+            }
+        });
+        cardefunds.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Admin_order_home.this,Payment_refund_requests.class);
                 startActivity(i);
             }
         });

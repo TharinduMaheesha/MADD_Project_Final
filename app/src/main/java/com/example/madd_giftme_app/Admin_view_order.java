@@ -51,17 +51,17 @@ public class Admin_view_order extends AppCompatActivity {
         reject = findViewById(R.id.BTN_VIEW_ORDER__REJECT);
 
 
-        if(getIntent().getStringExtra("token").isEmpty()){
-            token = "0";
-        }
-        else{
-            token = "1";
-        }
 
-        if(token.equalsIgnoreCase("1")){
+
+        if(getIntent().getStringExtra("token").equalsIgnoreCase("1")){
             accept.setVisibility(View.GONE);
             reject.setText("Add To Delivery");
         }
+        else if(getIntent().getStringExtra("token").equalsIgnoreCase("2")){
+            accept.setVisibility(View.GONE);
+            reject.setVisibility(View.GONE);
+        }
+
 
 
         home = findViewById(R.id.btnHome);

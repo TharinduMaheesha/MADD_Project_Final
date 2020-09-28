@@ -216,6 +216,8 @@
     <string name="decline">Decline</string>
     <string name="acceptedorder">Accepted Orders</string>
     <string name="payments">Payments</string>
+    <string name="viewrder">View Order</string>
+    <string name="refunds">Refund Requests</string>
 
 
     <string-array name="events">

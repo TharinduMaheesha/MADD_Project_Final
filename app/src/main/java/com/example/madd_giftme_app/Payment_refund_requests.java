@@ -5,46 +5,49 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.RectF;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.example.madd_giftme_app.Model.Orders;
-import com.example.madd_giftme_app.ViewHolder.AdminOrderViewHolder;
+import com.example.madd_giftme_app.Model.Products;
+import com.example.madd_giftme_app.Model.Refunds;
+import com.example.madd_giftme_app.ViewHolder.AdminProductsViewHolder;
+import com.example.madd_giftme_app.ViewHolder.RefundViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
-public class Admin_new_orders extends AppCompatActivity {
+public class Payment_refund_requests extends AppCompatActivity {
 
     private DatabaseReference ref ;
     private RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
+
     ImageButton home , account , products , orders;
 
-    int count = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_new_orders);
 
-
+        setContentView(R.layout.activity_payment_refund_requests);
         home = findViewById(R.id.btnHome);
         account = findViewById(R.id.btnAccount);
         products = findViewById(R.id.btnProducts);
         orders = findViewById(R.id.btnOrders);
 
-        ref = FirebaseDatabase.getInstance().getReference().child("Orders");
-        recyclerView = findViewById(R.id.NEW_ORDER_ADMIN_RECYCLER);
+        ref = FirebaseDatabase.getInstance().getReference().child("Refunds");
+        recyclerView = findViewById(R.id.refundrecycler);
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
@@ -70,54 +73,41 @@ public class Admin_new_orders extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
-
-
     }
+
 
     @Override
     protected void onStart() {
         super.onStart();
-        FirebaseRecyclerOptions<Orders> options  = new FirebaseRecyclerOptions.Builder<Orders>().setQuery(ref , Orders.class).build();
+        FirebaseRecyclerOptions<Refunds> options  = new FirebaseRecyclerOptions.Builder<Refunds>().setQuery(ref , Refunds.class).build();
 
-        final FirebaseRecyclerAdapter<Orders , AdminOrderViewHolder> adapter = new FirebaseRecyclerAdapter<Orders, AdminOrderViewHolder>(options) {
+        final FirebaseRecyclerAdapter<Refunds , RefundViewHolder> adapter = new FirebaseRecyclerAdapter<Refunds, RefundViewHolder>(options) {
             @Override
-            protected void onBindViewHolder(@NonNull final AdminOrderViewHolder holder, int position, @NonNull final Orders model) {
-
-                if(!model.getOrder_status().equalsIgnoreCase("Pending")){
-                    holder.card.setVisibility(View.GONE);
-                }
-                else {
+            protected void onBindViewHolder(@NonNull RefundViewHolder holder, int position, @NonNull final Refunds model) {
 
 
-
-                    holder.user.setText("User : " + model.getEmail());
-                    holder.id.setText("Order ID : " + model.getOrderid());
-                    holder.date.setText("Order Added on : " + model.getDate());
-                    holder.count.setVisibility(View.GONE);
-
+                if(model.getStatus().equalsIgnoreCase("pending")) {
+                    holder.oid.setText("Request : "+model.getRequestid());
+                    holder.mail.setText("User : "+model.getEmail());
                     holder.card.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            Intent i = new Intent(Admin_new_orders.this,Admin_view_order.class);
-                            i.putExtra("email" , model.getEmail());
-                            i.putExtra("date" , model.getDate());
-                            i.putExtra("total" , model.getTotal());
-                            i.putExtra("payment" , model.getPayment_status());
-                            i.putExtra("id" , model.getOrderid());
-                            i.putExtra("token" , "0");
-
-
-
-
-
-
+                            Intent i = new Intent(getApplicationContext(),view_refund.class);
+                            i.putExtra("rid" , model.getRequestid());
+                            i.putExtra("oid" , model.getOrderid());
+                            i.putExtra("user" , model.getEmail());
+                            i.putExtra("reason" , model.getReason());
+                            i.putExtra("status" , model.getStatus());
                             startActivity(i);
+
+
                         }
                     });
-
-
                 }
+                else{
+                    holder.card.setVisibility(View.GONE);
+                }
+
 
 
 
@@ -126,10 +116,10 @@ public class Admin_new_orders extends AppCompatActivity {
 
             @NonNull
             @Override
-            public AdminOrderViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            public RefundViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.admin_view_orders_layout , parent, false);
-                AdminOrderViewHolder holder = new AdminOrderViewHolder(view);
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.refunds_laout , parent, false);
+                RefundViewHolder holder = new RefundViewHolder(view);
                 return holder;
 
             }
@@ -138,5 +128,4 @@ public class Admin_new_orders extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         adapter.startListening();
     }
-
 }
