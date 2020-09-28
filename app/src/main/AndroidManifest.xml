@@ -41,7 +41,7 @@
         <activity
             android:name=".CartActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-
+        <activity
             android:name=".display_product_test"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
