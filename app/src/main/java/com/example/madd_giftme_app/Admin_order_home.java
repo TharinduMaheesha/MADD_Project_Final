@@ -44,7 +44,7 @@ public class Admin_order_home extends AppCompatActivity {
         orders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"You are curretly in the Orders Page" , Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"You are currently in the Orders Page" , Toast.LENGTH_LONG).show();
 
             }
         });
@@ -57,6 +57,14 @@ public class Admin_order_home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(Admin_order_home.this,Admin_new_orders.class);
+                startActivity(i);
+            }
+        });
+
+        cardAccepted.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Admin_order_home.this,Admin_accepted_orders.class);
                 startActivity(i);
             }
         });

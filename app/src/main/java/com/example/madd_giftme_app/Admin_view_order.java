@@ -40,12 +40,28 @@ public class Admin_view_order extends AppCompatActivity {
     TextView order_name , id , user,date , total ,payment;
     Button accept , reject;
     ImageButton home , account , products , orders;
+    String token;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_view_order);
+        accept = findViewById(R.id.BTN_VIEW_ORDER_ACCEPT);
+        reject = findViewById(R.id.BTN_VIEW_ORDER__REJECT);
+
+
+        if(getIntent().getStringExtra("token").isEmpty()){
+            token = "0";
+        }
+        else{
+            token = "1";
+        }
+
+        if(token.equalsIgnoreCase("1")){
+            accept.setVisibility(View.GONE);
+            reject.setText("Add To Delivery");
+        }
 
 
         home = findViewById(R.id.btnHome);
@@ -71,8 +87,6 @@ public class Admin_view_order extends AppCompatActivity {
         total.setText("\tTotal : "+getIntent().getStringExtra("total"));
         payment.setText("\tPayment Status : "+getIntent().getStringExtra("payment"));
 
-        accept = findViewById(R.id.BTN_VIEW_ORDER_ACCEPT);
-        reject = findViewById(R.id.BTN_VIEW_ORDER__REJECT);
 
         accept.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,6 +96,30 @@ public class Admin_view_order extends AppCompatActivity {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         snapshot.getRef().child("order_status").setValue("accepted");
+                        Toast.makeText(getApplicationContext(),"Order confirmed" , Toast.LENGTH_LONG).show();
+
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
+                Intent i = new Intent(Admin_view_order.this,Admin_order_home.class);
+                startActivity(i);
+            }
+        });
+
+        reject.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DatabaseReference newref = FirebaseDatabase.getInstance().getReference().child("Orders");
+                newref.child(getIntent().getStringExtra("id")).addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        snapshot.getRef().child("order_status").setValue("declined");
                         Toast.makeText(getApplicationContext(),"Order confirmed" , Toast.LENGTH_LONG).show();
 
 

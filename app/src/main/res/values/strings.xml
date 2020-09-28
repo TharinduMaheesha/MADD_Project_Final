@@ -214,6 +214,8 @@
     <string name="itemsss">Items</string>
     <string name="accept">Accept</string>
     <string name="decline">Decline</string>
+    <string name="acceptedorder">Accepted Orders</string>
+    <string name="payments">Payments</string>
 
 
     <string-array name="events">
