@@ -1,18 +1,14 @@
 package com.example.madd_giftme_app.ui.home;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.madd_giftme_app.BlankFragment;
 import com.example.madd_giftme_app.Model.Products;
 import com.example.madd_giftme_app.R;
 import com.example.madd_giftme_app.ViewHolder.ProductViewHolder;
