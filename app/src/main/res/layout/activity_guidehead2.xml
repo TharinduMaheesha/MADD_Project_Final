@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/back"
+    tools:context=".DeliveryControlGuide">
+
+    <Button
+        android:id="@+id/buttonFragment1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/input_design"
+        android:backgroundTint="#3F51B5"
+        android:drawableLeft="@android:drawable/stat_sys_download_done"
+        android:onClick="changeFragment"
+        android:text="How to use Delivery Control "
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/buttonFragment2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/input_design"
+        android:backgroundTint="#2196F3"
+        android:drawableLeft="@android:drawable/stat_sys_download"
+        android:onClick="changeFragment"
+        android:text="How to use Rider Control "
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="italic" />
+    <fragment
+        android:id="@+id/fragmentDefault"
+        android:name="com.example.giftmelk.guidePageOne"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="match_parent" />
+</LinearLayout>

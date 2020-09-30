@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">GIftMELK</string>
+    <string name="Items">Items</string>
+    <string name="Phone">phone</string>
+    <string name="Address">address</string>
+    <string name="name">name</string>
+    <string name="price">price</string>
+    <string name="boyid">boyid</string>
+    <string name="date">date</string>
+    <string name="DrivingLisonNumber">lison</string>
+    <string name="NIC">nic</string>
+    <string name="bikeNumber">bike</string>
+    <string name="age">age</string>
+    <string name="email">email</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="update">Update</string>
+</resources>

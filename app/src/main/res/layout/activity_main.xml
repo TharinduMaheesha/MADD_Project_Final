@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mad"
+    android:textAlignment="textStart"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <Button
+                android:id="@+id/btnDelivery"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="200dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/input_design"
+                android:backgroundTint="#1191F6"
+                android:drawableLeft="@android:drawable/ic_input_add"
+                android:text="Delivery Control"
+                android:textAlignment="textStart"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold|italic" />
+
+
+            <Button
+            android:id="@+id/btnRider"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/input_design"
+            android:backgroundTint="#324CDD"
+            android:drawableLeft="@android:drawable/ic_menu_sort_by_size"
+            android:text="Rider Control"
+            android:textAlignment="viewStart"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold|italic" />
+
+
+            <Button
+                android:id="@+id/btnGuide"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/input_design"
+                android:backgroundTint="#0B0033"
+                android:drawableLeft="@android:drawable/sym_action_chat"
+                android:text="Quick Guide"
+                android:textAlignment="viewStart"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold|italic" />
+
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="100dp"
+                android:background="@drawable/input_design"
+                android:backgroundTint="#717070"
+                android:text="Log Out"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
