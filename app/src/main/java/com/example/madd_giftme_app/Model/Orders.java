@@ -4,16 +4,14 @@ import java.util.List;
 
 public class Orders {
 
-    private String orderid , email , pid , date , time , quantity , discount , order_status , payment_status , delivery_status;
+    private String orderid , email , pid , did, date , time , quantity , discount , order_status , payment_status , delivery_status;
     private String total ;
 
-
-
-
-    public Orders(String orderid, String email, String pid, String date, String time, String quantity, String discount, String order_status, String payment_status, String delivery_status, String total) {
+    public Orders(String orderid, String email, String pid, String did, String date, String time, String quantity, String discount, String order_status, String payment_status, String delivery_status, String total) {
         this.orderid = orderid;
         this.email = email;
         this.pid = pid;
+        this.did = did;
         this.date = date;
         this.time = time;
         this.quantity = quantity;
@@ -45,6 +43,14 @@ public class Orders {
 
     public String getPid() {
         return pid;
+    }
+
+    public String getDid() {
+        return did;
+    }
+
+    public void setDid(String did) {
+        this.did = did;
     }
 
     public void setPid(String pid) {

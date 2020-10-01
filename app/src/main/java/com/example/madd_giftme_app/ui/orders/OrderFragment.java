@@ -13,6 +13,9 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.viewpager.widget.ViewPager;
 
+import com.example.madd_giftme_app.Adapter.NestedFragmentAdapter;
+import com.example.madd_giftme_app.OrdersToPayFragment;
+import com.example.madd_giftme_app.PaidOrdersFragment;
 import com.example.madd_giftme_app.R;
 import com.google.android.material.tabs.TabLayout;
 
@@ -29,8 +32,8 @@ public class OrderFragment extends Fragment {
                 ViewModelProviders.of(this).get(OrderViewModel.class);
         myFragment = inflater.inflate(R.layout.fragment_orders, container, false);
 
-//        viewPager = myFragment.findViewById(R.id.viewPager_orders);
-//        tabLayout = myFragment.findViewById(R.id.tabLayout_orders);
+        viewPager = myFragment.findViewById(R.id.viewPager_orders);
+        tabLayout = myFragment.findViewById(R.id.tabLayout_orders);
 
         return myFragment;
     }
@@ -63,11 +66,11 @@ public class OrderFragment extends Fragment {
 
     private void setUpViewPager(ViewPager viewPager) {
 
-//        NestedFragmentAdapter nestedFragmentAdapter = new NestedFragmentAdapter(getChildFragmentManager());
-//        nestedFragmentAdapter.addFragment(new OrdersToPayFragment(), "To pay");
-//        nestedFragmentAdapter.addFragment(new PaidOrdersFragment(), "Paid");
-//
-//        viewPager.setAdapter(nestedFragmentAdapter);
+        NestedFragmentAdapter nestedFragmentAdapter = new NestedFragmentAdapter(getChildFragmentManager());
+        nestedFragmentAdapter.addFragment(new OrdersToPayFragment(), "To pay");
+        nestedFragmentAdapter.addFragment(new PaidOrdersFragment(), "Paid");
+
+        viewPager.setAdapter(nestedFragmentAdapter);
 
     }
 }

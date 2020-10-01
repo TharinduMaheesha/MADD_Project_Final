@@ -15,13 +15,13 @@ public class OrdersViewHolder extends RecyclerView.ViewHolder {
     public OrdersViewHolder(@NonNull View itemView) {
         super(itemView);
 
-//        userName = itemView.findViewById(R.id.order_user_name);
-//        userAddress = itemView.findViewById(R.id.order_user_address);
-//        userPhone = itemView.findViewById(R.id.order_phone);
-//        totalPrice = itemView.findViewById(R.id.order_total_price);
-//        dateTime = itemView.findViewById(R.id.order_date_time);
-//        showOrdersProducts = itemView.findViewById(R.id.display_orders_list);
-//        message = itemView.findViewById(R.id.order_payment_status);
+        userName = itemView.findViewById(R.id.order_user_name);
+        userAddress = itemView.findViewById(R.id.order_user_address);
+        userPhone = itemView.findViewById(R.id.order_phone);
+        totalPrice = itemView.findViewById(R.id.order_total_price);
+        dateTime = itemView.findViewById(R.id.order_date_time);
+        showOrdersProducts = itemView.findViewById(R.id.display_orders_list);
+        message = itemView.findViewById(R.id.order_payment_status);
 
     }
 

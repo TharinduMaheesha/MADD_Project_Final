@@ -45,5 +45,15 @@
         android:name="com.example.madd_giftme_app.CheckoutFragment"
         android:label="fragment_checkout"
         tools:layout="@layout/fragment_checkout" />
+    <fragment
+        android:id="@+id/ordersToPayFragment"
+        android:name="com.example.madd_giftme_app.OrdersToPayFragment"
+        android:label="fragment_orders_to_pay"
+        tools:layout="@layout/fragment_orders_to_pay" />
+    <fragment
+        android:id="@+id/paidOrdersFragment"
+        android:name="com.example.madd_giftme_app.PaidOrdersFragment"
+        android:label="fragment_paid_orders"
+        tools:layout="@layout/fragment_paid_orders" />
 
 </navigation>
