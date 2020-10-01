@@ -86,6 +86,13 @@ public class Admin_add_new_product extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),Admin_account.class);
+                startActivity(i);
+            }
+        });
 
         spinner1 = findViewById(R.id.spinnerAddProductOccasion);
         spinner2 = findViewById(R.id.spinnerAddProductAvailabiity);

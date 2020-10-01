@@ -158,6 +158,13 @@ public class Admin_view_order extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),Admin_account.class);
+                startActivity(i);
+            }
+        });
 
 
 

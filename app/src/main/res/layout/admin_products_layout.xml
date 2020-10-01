@@ -10,8 +10,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="5dp"
-        app:cardBackgroundColor="#3949AB">
+        android:layout_marginBottom="5dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -26,7 +25,8 @@
                 android:layout_marginEnd="10dp"
                 android:text="@string/text_product1"
                 android:textAlignment="viewStart"
-                android:textColor="#F8F1F1"
+                android:textColor="#000000"
+                android:textColorHighlight="#00897B"
                 android:textSize="24sp"
                 android:textStyle="normal|bold|italic" />
 
@@ -52,7 +52,8 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="10dp"
                 android:text="@string/selectOcassion"
-                android:textColor="#F8F1F1"
+                android:textColor="#000000"
+                android:textColorHighlight="#00897B"
                 android:textSize="18sp"
                 android:textStyle="normal|bold|italic" />
 
@@ -66,7 +67,8 @@
                 android:layout_marginEnd="10dp"
                 android:text="@string/Available"
                 android:textAlignment="center"
-                android:textColor="#F8F1F1"
+                android:textColor="#000000"
+                android:textColorHighlight="#00897B"
                 android:textSize="18sp"
                 android:textStyle="normal|bold|italic" />
 
@@ -88,9 +90,10 @@
                     android:layout_marginEnd="2.5dp"
                     android:layout_weight="1"
                     android:background="@drawable/buttons"
-                    android:backgroundTint="#1E88E5"
+                    android:backgroundTint="#8F8F8E"
                     android:text="@string/editProd"
                     android:textColor="#FFFFFF"
+                    android:textColorHighlight="#00897B"
                     android:textSize="16sp"
                     android:textStyle="normal|bold" />
 
@@ -101,7 +104,7 @@
                     android:layout_marginStart="2.5dp"
                     android:layout_weight="1"
                     android:background="@drawable/buttons"
-                    android:backgroundTint="#1E88E5"
+                    android:backgroundTint="#8F8F8E"
                     android:text="@string/removeProd"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp"

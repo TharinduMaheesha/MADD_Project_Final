@@ -218,6 +218,13 @@
     <string name="payments">Payments</string>
     <string name="viewrder">View Order</string>
     <string name="refunds">Refund Requests</string>
+    <string name="Account">Account</string>
+    <string name="Acount">Acount Details</string>
+    <string name="pwd">Enter Current Password</string>
+    <string name="pas">Current Passwod</string>
+    <string name="newpwd">Enter New Password</string>
+    <string name="repeatpwd">Re-Enter Password</string>
+    <string name="amil">Email</string>
 
 
     <string-array name="events">

@@ -23,7 +23,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment{
 
     private View homeView ;
     private RecyclerView productsList ;
@@ -104,5 +104,7 @@ public class HomeFragment extends Fragment {
         productsList.setAdapter(adapter);
         adapter.startListening();
     }
+
+
 }
 

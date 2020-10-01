@@ -14,16 +14,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view_refund"
+        <activity android:name=".Admin_edit_account"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".Admin_reset_password"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Admin_account"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TestFragmentLaunch"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view_refund"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Payment_refund_requests"
             android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".View_payments"
@@ -51,7 +59,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Admin_home"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ConfirmFinalOrder" />
         <activity android:name=".AdminAddNewProductsToOccasions" />
         <activity
@@ -69,8 +77,13 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".StartingActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".AdminCategory" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:noHistory="true"><intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter></activity>
+        <activity android:name=".AdminCategory" ></activity>
     </application>
 
 </manifest>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E1DBDB"
     tools:context=".Admin_accepted_orders">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -20,7 +21,7 @@
         android:id="@+id/RLHEADER"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#0054BA">
+        android:background="#E3CC66">
 
         <TextView
             android:id="@+id/textView7"
@@ -29,7 +30,7 @@
             android:layout_marginTop="10dp"
             android:text="@string/acceptedorder"
             android:textAlignment="center"
-            android:textColor="#FFFFFF"
+            android:textColor="#000000"
             android:textSize="24sp"
             android:textStyle="bold" />
     </RelativeLayout>
@@ -40,13 +41,16 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="0dp"
-        android:background="#0054BA"
+        android:background="#E3CC66"
+        android:backgroundTint="#E3CC66"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="5dp"
+            android:background="#E3CC66"
+            android:backgroundTint="#E3CC66"
             android:orientation="horizontal">
 
             <ImageButton
@@ -54,7 +58,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#0054BA"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
                 app:srcCompat="@drawable/home" />
 
             <ImageButton
@@ -62,7 +67,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#0054BA"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
                 app:srcCompat="@drawable/cart" />
 
             <ImageButton
@@ -70,7 +76,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#0054BA"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
                 app:srcCompat="@drawable/occasion" />
 
             <ImageButton
@@ -78,7 +85,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#0054BA"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
                 app:srcCompat="@drawable/account" />
         </LinearLayout>
 
@@ -86,6 +94,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="10dp"
+            android:background="#E3CC66"
+            android:backgroundTint="#E3CC66"
             android:orientation="horizontal">
 
             <TextView
@@ -95,9 +105,11 @@
                 android:layout_marginStart="12dp"
                 android:layout_marginEnd="-5dp"
                 android:layout_weight="0.25"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
                 android:text="@string/menu_home"
                 android:textAlignment="center"
-                android:textColor="#FFFFFF"
+                android:textColor="#090909"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -107,9 +119,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
                 android:layout_weight="0.25"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
                 android:text="@string/View_orders"
                 android:textAlignment="center"
-                android:textColor="#FFFFFF"
+                android:textColor="#090909"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -119,9 +133,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_weight="0.25"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
                 android:text="@string/prod_interface"
                 android:textAlignment="center"
-                android:textColor="#FFFFFF"
+                android:textColor="#090909"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -131,9 +147,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_weight="0.25"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
                 android:text="@string/view_account"
                 android:textAlignment="center"
-                android:textColor="#FFFFFF"
+                android:textColor="#090909"
                 android:textSize="14sp"
                 android:textStyle="bold" />
         </LinearLayout>

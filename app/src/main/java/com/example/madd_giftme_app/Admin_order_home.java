@@ -48,6 +48,13 @@ public class Admin_order_home extends AppCompatActivity {
 
             }
         });
+        account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),Admin_account.class);
+                startActivity(i);
+            }
+        });
 
         cardNew = findViewById(R.id.CARD_NEW_ORDERS);
         cardAccepted = findViewById(R.id.CARD_ACCEPTED_ORDERS);

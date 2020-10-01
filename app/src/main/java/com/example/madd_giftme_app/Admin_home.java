@@ -60,6 +60,14 @@ public class Admin_home extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Admin_home.this,Admin_account.class);
+                startActivity(i);
+            }
+        });
+
 
 
 

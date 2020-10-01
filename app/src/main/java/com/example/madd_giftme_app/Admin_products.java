@@ -78,6 +78,13 @@ public class Admin_products extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),Admin_account.class);
+                startActivity(i);
+            }
+        });
     }
 
     @Override
@@ -97,7 +104,7 @@ public class Admin_products extends AppCompatActivity {
                     holder.edit.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            Intent i = new Intent(Admin_products.this , Admin_home.class);
+                            Intent i = new Intent(Admin_products.this , Admin_edit_product.class);
                             i.putExtra("pid" , model.getProduct_id());
                             i.putExtra("pName" , model.getProduct_name());
                             i.putExtra("pPrice" , model.getProduct_price());
