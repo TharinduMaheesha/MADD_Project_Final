@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    tools:context=".CheckoutFragment">
+
+    <TextView
+        android:id="@+id/text_confirm_shipping_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:padding="10dp"
+        android:text="Confirm your shipping details"
+        android:textSize="27sp"
+        android:textColor="#E77111"
+        android:layout_marginTop="40dp"
+        android:textAlignment="center"
+        android:textStyle="bold|italic"
+        >
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/shipping_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input_design_inside_app"
+        android:padding="15dp"
+        android:layout_below="@+id/text_confirm_shipping_details"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Name"
+        ></EditText>
+
+    <EditText
+        android:id="@+id/checkout_user_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input_design_inside_app"
+        android:padding="15dp"
+        android:layout_below="@+id/shipping_name"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Phone number"
+        ></EditText>
+
+    <EditText
+        android:id="@+id/shipping_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input_design_inside_app"
+        android:padding="15dp"
+        android:layout_below="@+id/checkout_user_phone"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Address"
+        ></EditText>
+
+    <EditText
+        android:id="@+id/shipping_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input_design_inside_app"
+        android:padding="15dp"
+        android:layout_below="@+id/shipping_address"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="City"
+        ></EditText>
+
+    <EditText
+        android:id="@+id/city_postal_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input_design_inside_app"
+        android:padding="15dp"
+        android:layout_below="@+id/shipping_city"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Postal code"
+        ></EditText>
+
+    <Button
+        android:id="@+id/checkout_order_btn"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/buttons"
+        android:text="Confirm"
+        android:padding="12dp"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        ></Button>
+
+</RelativeLayout>

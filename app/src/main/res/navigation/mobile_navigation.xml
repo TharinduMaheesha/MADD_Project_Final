@@ -40,5 +40,10 @@
         android:name="com.example.madd_giftme_app.ui.logout.LogoutFragment"
         android:label="Logout"
         tools:layout="@layout/fragment_logout" />
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.example.madd_giftme_app.CheckoutFragment"
+        android:label="fragment_checkout"
+        tools:layout="@layout/fragment_checkout" />
 
 </navigation>
