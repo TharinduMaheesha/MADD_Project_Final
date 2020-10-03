@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -13,7 +14,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,14 +34,56 @@ public class Admin_products extends AppCompatActivity {
     private DatabaseReference ref ;
     private RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
-    FloatingActionButton addnew;
+    FloatingActionButton addnew ,search , close;
     ImageButton home , account , products , orders;
+    String test;
+    LinearLayout LN;
+    EditText input;
+    Button searchProd;
 
 
+
+    @SuppressLint("RestrictedApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_products);
+
+        input = findViewById(R.id.EDSEARCHINPUT);
+        searchProd = findViewById(R.id.BTNSEARCHCONFIRM);
+        search = findViewById(R.id.SEARCHBUTTON);
+        LN = findViewById(R.id.LNSEARCH);
+        LN.setVisibility(View.GONE);
+        searchProd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                test = input.getText().toString();
+                onStart();
+
+            }
+        });
+
+        close = findViewById(R.id.CLOSESEARCH);
+        close.setVisibility(View.INVISIBLE);
+
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                LN.setVisibility(View.VISIBLE);
+                close.setVisibility(View.VISIBLE);
+                search.setVisibility(View.INVISIBLE);
+            }
+        });
+
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                search.setVisibility(View.VISIBLE);
+                LN.setVisibility(View.GONE);
+                close.setVisibility(View.INVISIBLE);
+            }
+        });
 
         home = findViewById(R.id.btnHome);
         account = findViewById(R.id.btnAccount);
@@ -51,6 +96,9 @@ public class Admin_products extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         addnew = findViewById(R.id.btn_add_new_admin);
+
+
+
 
         addnew.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,7 +139,7 @@ public class Admin_products extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        FirebaseRecyclerOptions<Products> options  = new FirebaseRecyclerOptions.Builder<Products>().setQuery(ref , Products.class).build();
+        FirebaseRecyclerOptions<Products> options  = new FirebaseRecyclerOptions.Builder<Products>().setQuery(ref.orderByChild("product_name").startAt(test) , Products.class).build();
 
         final FirebaseRecyclerAdapter<Products , AdminProductsViewHolder> adapter = new FirebaseRecyclerAdapter<Products, AdminProductsViewHolder>(options) {
             @Override

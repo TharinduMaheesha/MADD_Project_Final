@@ -108,7 +108,7 @@ public class Admin_account extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i =  new Intent(getApplicationContext(),StartingActivity.class);
                 startActivity(i);
-                Paper.book().destroy();
+
 
             }
         });

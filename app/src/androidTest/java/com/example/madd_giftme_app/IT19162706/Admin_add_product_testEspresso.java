@@ -12,7 +12,7 @@ import androidx.test.filters.LargeTest;
 import androidx.test.rule.ActivityTestRule;
 import androidx.test.runner.AndroidJUnit4;
 
-import com.example.madd_giftme_app.Admin_products;
+import com.example.madd_giftme_app.Admin_home;
 import com.example.madd_giftme_app.R;
 
 import org.hamcrest.Description;
@@ -38,35 +38,15 @@ import static org.hamcrest.Matchers.is;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class Admin_productsTest2 {
+public class Admin_add_product_testEspresso {
 
     @Rule
-    public ActivityTestRule<Admin_products> mActivityTestRule = new ActivityTestRule<>(Admin_products.class);
+    public ActivityTestRule<Admin_home> mActivityTestRule = new ActivityTestRule<>(Admin_home.class);
 
     @Test
-    public void admin_productsTest2() {
-        ViewInteraction appCompatButton = onView(
-                allOf(ViewMatchers.withId(R.id.btn_admin_remove), withText("Remove"),
-                        childAtPosition(
-                                allOf(withId(R.id.LNPRODUCTSADMIN),
-                                        childAtPosition(
-                                                withClassName(is("android.widget.RelativeLayout")),
-                                                4)),
-                                1),
-                        isDisplayed()));
-        appCompatButton.perform(click());
-
-        ViewInteraction appCompatButton2 = onView(
-                allOf(withId(android.R.id.button1), withText("Confirm"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withClassName(is("android.widget.ScrollView")),
-                                        0),
-                                3)));
-        appCompatButton2.perform(scrollTo(), click());
-
+    public void admin_add_product_testEspresso() {
         ViewInteraction appCompatImageButton = onView(
-                allOf(withId(R.id.btnProducts),
+                allOf(ViewMatchers.withId(R.id.btnProducts),
                         childAtPosition(
                                 childAtPosition(
                                         withId(R.id.LNNAV),
@@ -75,51 +55,15 @@ public class Admin_productsTest2 {
                         isDisplayed()));
         appCompatImageButton.perform(click());
 
-        ViewInteraction appCompatButton3 = onView(
-                allOf(withId(R.id.btn_admin_edit), withText("Edit"),
-                        childAtPosition(
-                                allOf(withId(R.id.LNPRODUCTSADMIN),
-                                        childAtPosition(
-                                                withClassName(is("android.widget.RelativeLayout")),
-                                                4)),
-                                0),
-                        isDisplayed()));
-        appCompatButton3.perform(click());
-
-        ViewInteraction appCompatSpinner = onView(
-                allOf(withId(R.id.spinnerEDITProductAvailabiity),
-                        childAtPosition(
-                                childAtPosition(
-                                        withClassName(is("android.widget.RelativeLayout")),
-                                        2),
-                                10)));
-        appCompatSpinner.perform(scrollTo(), click());
-
-        DataInteraction appCompatTextView = onData(anything())
-                .inAdapterView(childAtPosition(
-                        withClassName(is("android.widget.PopupWindow$PopupBackgroundView")),
-                        0))
-                .atPosition(0);
-        appCompatTextView.perform(click());
-
-        ViewInteraction appCompatButton4 = onView(
-                allOf(withId(R.id.btn_save_edit_product), withText("Save"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withClassName(is("android.widget.RelativeLayout")),
-                                        2),
-                                11)));
-        appCompatButton4.perform(scrollTo(), click());
-
-        ViewInteraction appCompatButton5 = onView(
-                allOf(withId(R.id.btn_add_new_admin), withText("Add New"),
+        ViewInteraction floatingActionButton = onView(
+                allOf(withId(R.id.btn_add_new_admin),
                         childAtPosition(
                                 childAtPosition(
                                         withId(android.R.id.content),
                                         0),
-                                2),
+                                3),
                         isDisplayed()));
-        appCompatButton5.perform(click());
+        floatingActionButton.perform(click());
 
         ViewInteraction appCompatImageView = onView(
                 allOf(withId(R.id.IV_ADMIN_ADD_PRODUCT_IMAGE),
@@ -137,7 +81,7 @@ public class Admin_productsTest2 {
                                         withClassName(is("android.widget.RelativeLayout")),
                                         2),
                                 1)));
-        appCompatEditText.perform(scrollTo(), replaceText("testi"), closeSoftKeyboard());
+        appCompatEditText.perform(scrollTo(), replaceText("Chocolate cake"), closeSoftKeyboard());
 
         ViewInteraction appCompatEditText2 = onView(
                 allOf(withId(R.id.ED_PRODUCT_PRICE),
@@ -146,7 +90,7 @@ public class Admin_productsTest2 {
                                         withClassName(is("android.widget.RelativeLayout")),
                                         2),
                                 3)));
-        appCompatEditText2.perform(scrollTo(), replaceText("15"), closeSoftKeyboard());
+        appCompatEditText2.perform(scrollTo(), replaceText("2500"), closeSoftKeyboard());
 
         ViewInteraction appCompatEditText3 = onView(
                 allOf(withId(R.id.ED_PRODUCT_DESCRIPTION),
@@ -155,16 +99,49 @@ public class Admin_productsTest2 {
                                         withClassName(is("android.widget.RelativeLayout")),
                                         2),
                                 5)));
-        appCompatEditText3.perform(scrollTo(), replaceText("tes"), closeSoftKeyboard());
+        appCompatEditText3.perform(scrollTo(), replaceText("Testing"), closeSoftKeyboard());
 
-        ViewInteraction appCompatButton6 = onView(
+        ViewInteraction appCompatSpinner = onView(
+                allOf(withId(R.id.spinnerAddProductOccasion),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("android.widget.RelativeLayout")),
+                                        2),
+                                7)));
+        appCompatSpinner.perform(scrollTo(), click());
+
+        DataInteraction appCompatCheckedTextView = onData(anything())
+                .inAdapterView(allOf(withId(R.id.select_dialog_listview),
+                        childAtPosition(
+                                withId(R.id.contentPanel),
+                                0)))
+                .atPosition(1);
+        appCompatCheckedTextView.perform(click());
+
+        ViewInteraction appCompatSpinner2 = onView(
+                allOf(withId(R.id.spinnerAddProductAvailabiity),
+                        childAtPosition(
+                                childAtPosition(
+                                        withClassName(is("android.widget.RelativeLayout")),
+                                        2),
+                                9)));
+        appCompatSpinner2.perform(scrollTo(), click());
+
+        DataInteraction appCompatTextView = onData(anything())
+                .inAdapterView(childAtPosition(
+                        withClassName(is("android.widget.PopupWindow$PopupBackgroundView")),
+                        0))
+                .atPosition(0);
+        appCompatTextView.perform(click());
+
+        ViewInteraction appCompatButton = onView(
                 allOf(withId(R.id.btn_save_add_product), withText("Save"),
                         childAtPosition(
                                 childAtPosition(
                                         withClassName(is("android.widget.RelativeLayout")),
                                         2),
                                 10)));
-        appCompatButton6.perform(scrollTo(), click());
+        appCompatButton.perform(scrollTo(), click());
     }
 
     private static Matcher<View> childAtPosition(

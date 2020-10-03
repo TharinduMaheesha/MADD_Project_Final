@@ -36,8 +36,8 @@
 
             <ImageView
                 android:id="@+id/iv_product_image_customer"
-                android:layout_width="175dp"
-                android:layout_height="170dp"
+                android:layout_width="150dp"
+                android:layout_height="130dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="11dp"

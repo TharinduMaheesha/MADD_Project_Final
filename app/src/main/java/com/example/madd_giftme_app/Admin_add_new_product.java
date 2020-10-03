@@ -155,7 +155,6 @@ public class Admin_add_new_product extends AppCompatActivity {
     }
 
     private void validateProductData() {
-
         productName = name.getText().toString().trim();
         productPrice = price.getText().toString().trim();
         productDesc = description.getText().toString().trim();
@@ -167,21 +166,17 @@ public class Admin_add_new_product extends AppCompatActivity {
         }
         else if(TextUtils.isEmpty(productName)){
             Toast.makeText(getApplicationContext(),"Please enter product name",Toast.LENGTH_SHORT).show();
-
         }
         else if(TextUtils.isEmpty(productPrice)){
             Toast.makeText(getApplicationContext(),"Please enter product price",Toast.LENGTH_SHORT).show();
-
         }
         else if(TextUtils.isEmpty(productDesc)){
             Toast.makeText(getApplicationContext(),"Please enter product description",Toast.LENGTH_SHORT).show();
-
         }
         else if(TextUtils.isEmpty(prod_availability)){
             Toast.makeText(getApplicationContext(),"Please select product Availability",Toast.LENGTH_SHORT).show();
-
         }
-        else{
+        else {
             loadingBar.setTitle("Add Product");
             loadingBar.setMessage("Please wait while details are being added to the database");
             loadingBar.setCanceledOnTouchOutside(false);
@@ -189,8 +184,6 @@ public class Admin_add_new_product extends AppCompatActivity {
             StoreProductInfo();
 
         }
-
-
     }
 
     private void StoreProductInfo() {

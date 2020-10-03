@@ -67,9 +67,6 @@ public class Admin_add_new_productTest {
     @Test
     public void testingStoreData() {
 
-
-
-
         maxID = maxID + 1;
         String id = "PID" + maxID;
 

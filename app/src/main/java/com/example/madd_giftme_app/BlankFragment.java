@@ -14,6 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.madd_giftme_app.Model.Products;
@@ -32,6 +34,9 @@ public class BlankFragment extends Fragment {
     private RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
     private View view ;
+    private String input;
+    private EditText searchInput;
+    private Button searchButton;
 
     private OccasionsViewModel occasionsViewModel;
     @Override
@@ -49,6 +54,17 @@ public class BlankFragment extends Fragment {
         mBundle = getArguments();
         event =  mBundle.getString("event");
 
+        searchButton = view.findViewById(R.id.BTN_OCCASOINS_SEARCH);
+        searchInput = view.findViewById(R.id.ED_OCCASIONS_SEARCH_INPUT);
+
+        searchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                input = searchInput.getText().toString();
+                onStart();
+            }
+        });
+
 
         return view;
     }
@@ -57,7 +73,7 @@ public class BlankFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        FirebaseRecyclerOptions<Products> options  = new FirebaseRecyclerOptions.Builder<Products>().setQuery(ref , Products.class).build();
+        FirebaseRecyclerOptions<Products> options  = new FirebaseRecyclerOptions.Builder<Products>().setQuery(ref.orderByChild("product_name").startAt(input) , Products.class).build();
 
         final FirebaseRecyclerAdapter<Products , OccasionProcductViewHolder> adapter = new FirebaseRecyclerAdapter<Products, OccasionProcductViewHolder>(options) {
             @Override

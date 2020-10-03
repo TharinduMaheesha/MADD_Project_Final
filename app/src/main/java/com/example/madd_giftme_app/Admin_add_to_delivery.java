@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.madd_giftme_app.Model.Riders;
 import com.google.firebase.database.DataSnapshot;
@@ -71,6 +72,9 @@ public class Admin_add_to_delivery extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 addDelivery();
+                Toast.makeText(getApplicationContext(),"Successfully added to delivery" , Toast.LENGTH_LONG).show();
+                Intent i = new Intent(getApplicationContext(),Admin_home.class);
+                startActivity(i);
             }
         });
 

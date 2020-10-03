@@ -232,6 +232,8 @@
     <string name="licence">License</string>
     <string name="vehicle">Vehicle Type</string>
     <string name="ongoing">Ongoing Deliveries</string>
+    <string name="search">Search</string>
+    <string name="searchHint">Search here</string>
 
 
     <string-array name="events">

@@ -1,22 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/TESTING"
-
     xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/TESTING"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFB300"
     tools:context="com.example.madd_giftme_app.ui.home.HomeFragment">
 
+
+    <LinearLayout
+        android:id="@+id/LNSEARCHOME"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RLHEADER"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/EDHOMEINPUT"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/stroke"
+            android:ems="10"
+            android:hint="@string/searchHint"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#F8F8F8" />
+
+        <Button
+            android:id="@+id/BTNHOMESEARCH"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:backgroundTint="#000000"
+            android:drawableRight="@android:drawable/ic_menu_search"
+            android:padding="10dp"
+            android:text="@string/search"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/HOMESEARCHFLOAT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="30dp"
+        android:clickable="true"
+        android:src="@drawable/search__1_"
+        app:backgroundTint="#FB8C00" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_menu_fr_home"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/LNSEARCHOME"
         android:background="#F57C00"
-        android:backgroundTint="#FFA000"
+        android:backgroundTint="#F57C00"
         android:scrollbars="vertical">
 
     </androidx.recyclerview.widget.RecyclerView>
 
-</LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/HOMESEARCCANCEL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="31dp"
+        android:clickable="true"
+        android:src="@drawable/wrong"
+        app:backgroundTint="#FB8C00" />
+
+</RelativeLayout>

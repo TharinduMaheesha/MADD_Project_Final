@@ -74,16 +74,7 @@ public class Admin_productsTest {
         secondActivity.finish();
     }
 
-    @Test
-    public void TestLaunchOfEditProductsActivityOnButtonClick(){
 
-        assertNotNull(admin_products.findViewById(R.id.btn_admin_edit));
-        onView(withId(R.id.btn_admin_edit)).perform(click());
-        Activity secondActivity = getInstrumentation().waitForMonitorWithTimeout(monitor4,500);
-        assertNotNull(secondActivity);
-
-        secondActivity.finish();
-    }
 
     @After
     public void tearDown() throws Exception {
