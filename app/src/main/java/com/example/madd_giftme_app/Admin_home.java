@@ -1,6 +1,7 @@
 package com.example.madd_giftme_app;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ public class Admin_home extends AppCompatActivity {
     ImageButton home , account , products , orders;
     TextView date;
     String curDate;
+    CardView cardrider , cardGuide;
 
 
     @Override
@@ -30,6 +32,9 @@ public class Admin_home extends AppCompatActivity {
         products = findViewById(R.id.btnProducts);
         orders = findViewById(R.id.btnOrders);
         date = findViewById(R.id.TV_DATE);
+
+        cardrider = findViewById(R.id.cardRider);
+        cardGuide = findViewById(R.id.cardGuide);
 
         Calendar calendar = Calendar.getInstance();
 
@@ -69,9 +74,29 @@ public class Admin_home extends AppCompatActivity {
         });
 
 
+        cardrider.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Admin_home.this,Admin_view_riders.class);
+                startActivity(i);
+            }
+        });
+
+        cardGuide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                guide();
+            }
+        });
 
 
 
 
+    }
+
+    public void guide () {
+        Intent intent = new Intent(this, DeliveryControlGuide.class);
+        startActivity(intent);
+        Toast.makeText(getApplicationContext(), "Use this guide for the first time", Toast.LENGTH_LONG).show();
     }
 }

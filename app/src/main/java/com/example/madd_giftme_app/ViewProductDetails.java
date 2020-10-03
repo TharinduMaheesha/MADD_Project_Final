@@ -148,7 +148,7 @@ public class ViewProductDetails extends Fragment {
 
                     productDetailsName.setText(products.getProduct_name());
                     productDetailsPrice.setText("Price :   LKR " + products.getProduct_price());
-                    productDetailsDescription.setText("Item Description : " + products.getProduct_description());
+                    productDetailsDescription.setText("Item Description : \n" + "\n"+ products.getProduct_description());
                     occassion.setText("Occasion :   "+products.getProduct_event());
 
                     Picasso.get().load(products.getProduct_image()).into(productDetailsImage);

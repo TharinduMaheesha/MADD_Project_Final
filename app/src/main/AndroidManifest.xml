@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.madd_giftme_app">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -9,13 +10,29 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_foreground"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".Admin_edit_account"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
+        <activity android:name=".Admin_edit_rider"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".Admin_delivered_activity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Admin_ongoing_deliveries"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Admin_Add_rider"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Admin_view_riders"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Admin_add_to_delivery"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Admin_delivery_home"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".Admin_edit_account"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Admin_reset_password"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -30,9 +47,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Payment_refund_requests"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".View_payments"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -59,7 +74,13 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Admin_home"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".ConfirmFinalOrder" />
         <activity android:name=".AdminAddNewProductsToOccasions" />
         <activity
@@ -77,13 +98,12 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".StartingActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:noHistory="true"><intent-filter>
-        <action android:name="android.intent.action.MAIN" />
-
-        <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter></activity>
-        <activity android:name=".AdminCategory" ></activity>
+            android:noHistory="true"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".AdminCategory" />
+        <activity
+            android:name=".DeliveryControlGuide"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

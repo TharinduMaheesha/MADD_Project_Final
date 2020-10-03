@@ -3,10 +3,12 @@ package com.example.madd_giftme_app;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,6 +19,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.madd_giftme_app.Model.AddProducts;
+import com.example.madd_giftme_app.Model.OrderItems;
 import com.example.madd_giftme_app.Prevalent.Prevalent;
 import com.example.madd_giftme_app.ViewHolder.AddProductsViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -26,6 +29,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 public class CartActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView ;
@@ -33,11 +41,14 @@ public class CartActivity extends AppCompatActivity {
     private Button nextProcessButton ;
     private TextView txtTotalAmount ;
     public Double totalPrice = 0.00 ;
+    public HashMap items;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
+
+        items= new HashMap();
 
         recyclerView = (RecyclerView) findViewById(R.id.cart_list);
         recyclerView.setHasFixedSize(true);
@@ -54,6 +65,9 @@ public class CartActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(CartActivity.this, ConfirmFinalOrder.class);
                 intent.putExtra("Total price", String.valueOf(totalPrice));
+                Bundle args = new Bundle();
+                args.putSerializable("items" , (Serializable)items);
+                intent.putExtra("bundle" , args);
                 startActivity(intent);
                 finish();
 
@@ -72,21 +86,37 @@ public class CartActivity extends AppCompatActivity {
         FirebaseRecyclerOptions<AddProducts> options =
                 new FirebaseRecyclerOptions.Builder<AddProducts>()
                 .setQuery(cartListRef.child("User View")
-                    .child(Prevalent.currentOnlineUser.getEmail()).child("Products"), AddProducts.class)
+                    .child("test").child("Products"), AddProducts.class)
                         .build();
 
         FirebaseRecyclerAdapter<AddProducts, AddProductsViewHolder> adapter
                 = new FirebaseRecyclerAdapter<AddProducts, AddProductsViewHolder>(options) {
             @Override
-            protected void onBindViewHolder(@NonNull AddProductsViewHolder holder, int position, @NonNull final AddProducts model) {
+            protected void onBindViewHolder(@NonNull final AddProductsViewHolder holder, int position, @NonNull final AddProducts model) {
 
                 holder.txtProductQuantity.setText("Quantity = "+model.getQuantity());
                 holder.txtProductName.setText(model.getPname());
                 holder.txtProductPrice.setText("Price = " + model.getPrice() + "LKR");
 
-                Double oneTypeProductTotalPrice = ((Double.valueOf(model.getPrice()))) * Double.valueOf(model.getQuantity()) ;
-                totalPrice = totalPrice + oneTypeProductTotalPrice ;
+                holder.box.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
 
+                        if(holder.box.isChecked()){
+
+                            items.put(model.getPid(), model.getQuantity());
+                        }
+                        else if(!holder.box.isChecked()){
+
+                            items.remove(model.getPid());
+                        }
+                    }
+                });
+
+             //   Double oneTypeProductTotalPrice = ((Double.valueOf(model.getPrice()))) * Double.valueOf(model.getQuantity()) ;
+            //      totalPrice = totalPrice + oneTypeProductTotalPrice ;
+
+                totalPrice = 1000.0;
 
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -113,7 +143,7 @@ public class CartActivity extends AppCompatActivity {
                                 }
                                 if(i==1){
                                     cartListRef.child("User View")
-                                            .child(Prevalent.currentOnlineUser.getName())
+                                            .child("test")
                                             .child(model.getPid())
                                             .removeValue()
                                             .addOnCompleteListener(new OnCompleteListener<Void>() {

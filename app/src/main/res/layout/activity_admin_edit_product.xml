@@ -31,7 +31,7 @@
         android:layout_above="@+id/LNNAV"
         android:layout_below="@+id/RLHEADER"
         android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp">
+        android:layout_marginBottom="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -231,9 +231,9 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginBottom="30dp"
                         android:background="@drawable/buttons_admin"
-                        android:backgroundTint="#8F8F8E"
                         android:text="@string/AddProductSave"
-                        android:textColor="#FFFFFF" />
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp" />
 
                 </LinearLayout>
 
@@ -249,9 +249,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="0dp"
-        android:background="#E3CC66"
+        android:background="@android:color/darker_gray"
         android:backgroundTint="#E3CC66"
         android:orientation="vertical">
+
+
 
         <LinearLayout
             android:layout_width="match_parent"

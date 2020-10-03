@@ -81,7 +81,7 @@ public class Admin_order_home extends AppCompatActivity {
         cardDelivery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Admin_order_home.this,View_payments.class);
+                Intent i = new Intent(Admin_order_home.this,Admin_delivery_home.class);
                 startActivity(i);
             }
         });

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MADD_GiftMe_App</string>
+    <string name="app_name">GiftMe</string>
     <string name="cake_name">Coffee cake</string>
     <string name="cake_description">Same design as shown in the image. Weight is 1 Kg.</string>
     <string name="cake_price">LKR 1800.00</string>
@@ -225,6 +225,13 @@
     <string name="newpwd">Enter New Password</string>
     <string name="repeatpwd">Re-Enter Password</string>
     <string name="amil">Email</string>
+    <string name="hkjdaf">Enter Rider Name</string>
+    <string name="riderControl">Rider Control</string>
+    <string name="addrider">Add Rider</string>
+    <string name="vehive">Vehicle Plate Number</string>
+    <string name="licence">License</string>
+    <string name="vehicle">Vehicle Type</string>
+    <string name="ongoing">Ongoing Deliveries</string>
 
 
     <string-array name="events">
@@ -235,6 +242,15 @@
         <item>Bridal Shower</item>
         <item>Weddings</item>
         <item>Other</item>
+    </string-array>
+
+    <string-array name="vehicles">
+        <item>Car</item>
+        <item>Van</item>
+        <item>Bike</item>
+        <item>Three Wheeler</item>
+        <item>Mini van</item>
+
 
     </string-array>
     <string-array name="prodStatus">

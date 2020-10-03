@@ -17,6 +17,8 @@ public class AdminOrderViewHolder extends RecyclerView.ViewHolder implements  Vi
 
     public CardView card;
     public TextView id , date , count , user;
+    public ImageView added , notadded;
+    public TextView status;
 
     private ItemClickListener listener;
 
@@ -29,6 +31,10 @@ public class AdminOrderViewHolder extends RecyclerView.ViewHolder implements  Vi
         id = itemView.findViewById(R.id.TV_ORDER_ID_NEW_ORDER);
         date = itemView.findViewById(R.id.TV_DATE_NEW_ORDER_ADMIN);
         count = itemView.findViewById(R.id.TV_Items_NEW_ORDER_ADMIN);
+        notadded = itemView.findViewById(R.id.IV_NOTADDED);
+        added = itemView.findViewById(R.id.IV_ADDED);
+        status = itemView.findViewById(R.id.status);
+
     }
 
     public void setItemClickListener(ItemClickListener listener){

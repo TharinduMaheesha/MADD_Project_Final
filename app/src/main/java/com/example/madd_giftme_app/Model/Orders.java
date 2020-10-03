@@ -5,7 +5,7 @@ import java.util.List;
 public class Orders {
 
     private String orderid , email , pid , date , time , quantity , discount , order_status , payment_status , delivery_status;
-    private String total ;
+    private String total  , deliveryid;
 
 
 
@@ -115,6 +115,12 @@ public class Orders {
         this.total = total;
     }
 
+    public String getDeliveryid() {
+        return deliveryid;
+    }
 
+    public void setDeliveryid(String deliveryid) {
+        this.deliveryid = deliveryid;
+    }
 }
 

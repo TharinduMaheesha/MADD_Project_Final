@@ -21,6 +21,7 @@ import com.example.madd_giftme_app.Model.Products;
 import com.example.madd_giftme_app.ViewHolder.AdminProductsViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
@@ -30,7 +31,7 @@ public class Admin_products extends AppCompatActivity {
     private DatabaseReference ref ;
     private RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
-    Button addnew;
+    FloatingActionButton addnew;
     ImageButton home , account , products , orders;
 
 

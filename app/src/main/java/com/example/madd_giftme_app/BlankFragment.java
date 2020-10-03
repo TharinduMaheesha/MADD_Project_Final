@@ -67,7 +67,7 @@ public class BlankFragment extends Fragment {
 
                     holder.name.setVisibility(View.GONE);
                     holder.price.setVisibility(View.GONE);
-                    holder.description.setVisibility(View.GONE);
+                  //  holder.description.setVisibility(View.GONE);
                     holder.image.setVisibility(View.GONE);
                     holder.card.setVisibility(View.GONE);
 
@@ -75,9 +75,9 @@ public class BlankFragment extends Fragment {
                 else{
                     holder.name.setText(model.getProduct_name());
                     holder.price.setText(model.getProduct_price() + " LKR");
-                    holder.description.setText(model.getProduct_description());
+                   // holder.description.setText(model.getProduct_description());
                     Picasso.get().load(model.getProduct_image()).into(holder.image);
-                    holder.image.setOnClickListener(new View.OnClickListener() {
+                    holder.card.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
 

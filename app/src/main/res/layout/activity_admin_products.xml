@@ -30,27 +30,11 @@
         android:id="@+id/adminProductRecycler"
         android:layout_width="match_parent"
         android:layout_height="473dp"
-        android:layout_above="@+id/btn_add_new_admin"
+        android:layout_above="@+id/LNNAV"
         android:layout_below="@+id/RLHEADER"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="10dp">
+        android:layout_marginTop="5dp">
 
     </androidx.recyclerview.widget.RecyclerView>
-
-    <Button
-        android:id="@+id/btn_add_new_admin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/LNNAV"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/buttons_admin"
-        android:backgroundTint="#8F8F8E"
-        android:text="@string/AddNew"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        android:textStyle="normal|bold" />
 
     <LinearLayout
         android:id="@+id/LNNAV"
@@ -173,5 +157,19 @@
                 android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_add_new_admin"
+        android:layout_width="78dp"
+        android:layout_height="71dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="97dp"
+        android:backgroundTint="#FB8C00"
+        android:clickable="true"
+        android:src="@drawable/addddddd"
+        app:backgroundTint="#F4511E"
+        app:fabSize="normal" />
 
 </RelativeLayout>

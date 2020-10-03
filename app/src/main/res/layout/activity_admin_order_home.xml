@@ -48,12 +48,12 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="5dp"
-                android:background="@drawable/background_image">
+                android:background="@drawable/background_image"
+                app:cardBackgroundColor="#FFFFFF">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/stroke">
+                    android:layout_height="match_parent">
 
                     <ImageView
                         android:id="@+id/imageView"
@@ -84,12 +84,12 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="5dp"
-                android:background="@drawable/background_image">
+                android:background="@drawable/background_image"
+                app:cardBackgroundColor="#FFFFFF">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/stroke">
+                    android:layout_height="match_parent">
 
                     <ImageView
                         android:id="@+id/imageView2"
@@ -124,12 +124,12 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="5dp"
-                android:background="@drawable/background_image">
+                android:background="@drawable/background_image"
+                app:cardBackgroundColor="#FFFFFF">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/stroke">
+                    android:layout_height="match_parent">
 
                     <ImageView
                         android:id="@+id/imageView3"
@@ -164,12 +164,12 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="5dp"
-                android:background="@drawable/background_image">
+                android:background="@drawable/background_image"
+                app:cardBackgroundColor="#FFFFFF">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/stroke">
+                    android:layout_height="match_parent">
 
                     <ImageView
                         android:id="@+id/IV_PAYMENTS"
@@ -204,12 +204,12 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="20dp"
-                android:background="@drawable/background_image">
+                android:background="@drawable/background_image"
+                app:cardBackgroundColor="#FFFFFF">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/stroke">
+                    android:layout_height="match_parent">
 
                     <ImageView
                         android:id="@+id/IBKJ"

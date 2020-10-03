@@ -171,5 +171,14 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+    public void onBackPressed()
+    {
+        super.onBackPressed();
+        Intent i = new Intent(getApplicationContext(), StartingActivity.class);
+        startActivity(i);
+
+
+    }
+
 
 }

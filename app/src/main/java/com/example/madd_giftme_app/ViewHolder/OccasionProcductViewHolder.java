@@ -30,7 +30,7 @@ public class OccasionProcductViewHolder extends RecyclerView.ViewHolder implemen
         name = (TextView) itemView.findViewById(
                 R.id.tv_product_name_customer);
         price = (TextView) itemView.findViewById(R.id.tv_product_price_customer);
-        description = (TextView) itemView.findViewById(R.id.tv_product_description_customer);
+      //  description = (TextView) itemView.findViewById(R.id.tv_product_description_customer);
         image = (ImageView) itemView.findViewById(R.id.iv_product_image_customer);
         relativeLayout = (RelativeLayout) itemView.findViewById(R.id.RVSOME);
         card = (CardView) itemView.findViewById(R.id.cv_1);

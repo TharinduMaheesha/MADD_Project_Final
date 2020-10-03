@@ -55,7 +55,14 @@ public class Admin_view_order extends AppCompatActivity {
 
         if(getIntent().getStringExtra("token").equalsIgnoreCase("1")){
             accept.setVisibility(View.GONE);
-            reject.setText("Add To Delivery");
+
+            if(getIntent().getStringExtra("stat").equalsIgnoreCase("not assigned")){
+             reject.setText("Add To Delivery");
+            }
+            else{
+                reject.setVisibility(View.GONE);
+            }
+
         }
         else if(getIntent().getStringExtra("token").equalsIgnoreCase("2")){
             accept.setVisibility(View.GONE);
@@ -108,6 +115,7 @@ public class Admin_view_order extends AppCompatActivity {
                 });
 
                 Intent i = new Intent(Admin_view_order.this,Admin_order_home.class);
+                i.putExtra("delivery" , getIntent().getStringExtra("delivery"));
                 startActivity(i);
             }
         });
@@ -115,24 +123,34 @@ public class Admin_view_order extends AppCompatActivity {
         reject.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DatabaseReference newref = FirebaseDatabase.getInstance().getReference().child("Orders");
-                newref.child(getIntent().getStringExtra("id")).addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        snapshot.getRef().child("order_status").setValue("declined");
-                        Toast.makeText(getApplicationContext(),"Order confirmed" , Toast.LENGTH_LONG).show();
+
+                if(getIntent().getStringExtra("token").equalsIgnoreCase("0")) {
+                    DatabaseReference newref = FirebaseDatabase.getInstance().getReference().child("Orders");
+                    newref.child(getIntent().getStringExtra("id")).addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            snapshot.getRef().child("order_status").setValue("declined");
+                            Toast.makeText(getApplicationContext(), "Order confirmed", Toast.LENGTH_LONG).show();
 
 
-                    }
+                        }
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
 
-                    }
-                });
+                        }
+                    });
 
-                Intent i = new Intent(Admin_view_order.this,Admin_order_home.class);
-                startActivity(i);
+                    Intent i = new Intent(Admin_view_order.this, Admin_order_home.class);
+                    startActivity(i);
+                }
+                else {
+
+
+                    Intent i = new Intent(Admin_view_order.this, Admin_add_to_delivery.class);
+                    i.putExtra("delivery" , getIntent().getStringExtra("delivery"));
+                    startActivity(i);
+                }
             }
         });
 

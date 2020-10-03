@@ -16,8 +16,11 @@ import com.example.madd_giftme_app.Model.Orders;
 import com.example.madd_giftme_app.ViewHolder.AdminOrderViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Admin_accepted_orders extends AppCompatActivity {
 
@@ -79,6 +82,8 @@ public class Admin_accepted_orders extends AppCompatActivity {
 
     @Override
     protected void onStart() {
+
+        final String[] statussss = new String[1];
         super.onStart();
         FirebaseRecyclerOptions<Orders> options  = new FirebaseRecyclerOptions.Builder<Orders>().setQuery(ref , Orders.class).build();
 
@@ -91,12 +96,34 @@ public class Admin_accepted_orders extends AppCompatActivity {
                 }
                 else {
 
+                    DatabaseReference dat = FirebaseDatabase.getInstance().getReference().child("Delivery").child(model.getDeliveryid());
+
+                    dat.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            String assigned = snapshot.child("rider").getValue().toString();
+                            statussss[0] = assigned;
+
+                            if(assigned.equalsIgnoreCase("not assigned")){
+                                holder.added.setVisibility(View.GONE);
+                            }
+                            else{
+                                holder.notadded.setVisibility(View.GONE);
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                        }
+                    });
 
 
                     holder.user.setText("User : " + model.getEmail());
                     holder.id.setText("Order ID : " + model.getOrderid());
                     holder.date.setText("Order Added on : " + model.getDate());
                     holder.count.setVisibility(View.GONE);
+                    holder.status.setText("Added to delivery : ");
 
                     holder.card.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -108,6 +135,8 @@ public class Admin_accepted_orders extends AppCompatActivity {
                             i.putExtra("payment" , model.getPayment_status());
                             i.putExtra("id" , model.getOrderid());
                             i.putExtra("token" , "1");
+                            i.putExtra("delivery" , model.getDeliveryid());
+                            i.putExtra("stat" , statussss[0]);
 
 
 

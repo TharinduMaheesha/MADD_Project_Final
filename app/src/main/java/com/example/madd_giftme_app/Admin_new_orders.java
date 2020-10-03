@@ -102,6 +102,10 @@ public class Admin_new_orders extends AppCompatActivity {
                     holder.id.setText("Order ID : " + model.getOrderid());
                     holder.date.setText("Order Added on : " + model.getDate());
                     holder.count.setVisibility(View.GONE);
+                    holder.added.setVisibility(View.GONE);
+                    holder.notadded.setVisibility(View.GONE);
+                    holder.status.setVisibility(View.GONE);
+
 
                     holder.card.setOnClickListener(new View.OnClickListener() {
                         @Override
