@@ -4,25 +4,18 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
-
 import com.example.madd_giftme_app.Model.Delivery;
 import com.example.madd_giftme_app.Model.Orders;
-import com.example.madd_giftme_app.Prevalent.Prevalent;
 import com.example.madd_giftme_app.ViewHolder.OrdersViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -31,18 +24,13 @@ import com.google.firebase.database.ValueEventListener;
 
 public class OrdersToPayFragment extends Fragment {
 
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
     private String paymentStatus, deliveryId, cID ;
     private View orderView, productsList;
     private RecyclerView recyclerView ;
     private DatabaseReference deliveryRef, orderRef ;
-    private String mParam1;
-    private String mParam2;
 
     public OrdersToPayFragment() {
-        // Required empty public constructor
+
     }
 
     @Override
@@ -90,41 +78,30 @@ public class OrdersToPayFragment extends Fragment {
 
                             CharSequence options [] = new CharSequence[]
                                     {
-                                            "Edit",
-                                            "Remove"
+                                            "View products",
+                                            "Cancel order"
 
                                     };
                             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                            builder.setTitle("Cart options : ");
+                            builder.setTitle("Order options : ");
 
                             builder.setItems(options, new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
 
                                     if(i == 0){
-                                        Intent intent = new Intent(getActivity(), ViewProductDetails.class);
-                                        intent.putExtra("pid", model.getEmail());
+
+                                        Intent intent = new Intent(getActivity(), ViewOrderProducts.class);
+                                        intent.putExtra("cid", model.getEmail());
                                         startActivity(intent);
 
                                     }
                                     if(i==1){
-                                        orderRef.child("User View")
-                                                .child(Prevalent.currentOnlineUser.getName())
-                                                .child(model.getEmail())
-                                                .removeValue()
-                                                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                                    @Override
-                                                    public void onComplete(@NonNull Task<Void> task) {
 
-                                                        if(task.isSuccessful()){
+                                        Intent intent = new Intent(getActivity(), CancelOrder.class);
+                                        intent.putExtra("oid", model.getOrderid());
+                                        startActivity(intent);
 
-                                                            Toast.makeText(getActivity(), "Item removed successfully!", Toast.LENGTH_SHORT).show();
-
-                                                            Intent intent = new Intent(getActivity(), display_product_test.class);
-                                                            startActivity(intent);
-                                                        }
-                                                    }
-                                                });
                                     }
                                 }
 
@@ -178,4 +155,5 @@ public class OrdersToPayFragment extends Fragment {
         recyclerView.setAdapter(adapter);
         adapter.startListening();
     }
+
 }

@@ -1,5 +1,8 @@
 package com.example.madd_giftme_app;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -24,37 +27,13 @@ import com.google.firebase.database.ValueEventListener;
 
 public class PaidOrdersFragment extends Fragment {
 
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    private String mParam1;
-    private String mParam2;
     private String paymentStatus, deliveryId ;
     private View orderView ;
     private RecyclerView recyclerView ;
     private DatabaseReference deliveryRef, orderRef ;
 
     public PaidOrdersFragment() {
-        // Required empty public constructor
-    }
 
-    public static PaidOrdersFragment newInstance(String param1, String param2) {
-        PaidOrdersFragment fragment = new PaidOrdersFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
@@ -92,6 +71,44 @@ public class PaidOrdersFragment extends Fragment {
                     holder.totalPrice.setText("Total price : " + model.getTotal() + " LKR");
                     holder.dateTime.setText("Ordered at : " + model.getDate() + " " + model.getTime());
                     deliveryId = model.getDid();
+
+                    holder.showOrdersProducts.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+
+                            CharSequence options [] = new CharSequence[]
+                                    {
+                                            "View products",
+                                            "Cancel order"
+
+                                    };
+                            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                            builder.setTitle("Order options : ");
+
+                            builder.setItems(options, new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+
+                                    if(i == 0){
+
+                                        Intent intent = new Intent(getActivity(), ViewOrderProducts.class);
+                                        intent.putExtra("cid", model.getEmail());
+                                        startActivity(intent);
+
+                                    }
+                                    if(i==1){
+
+                                        Intent intent = new Intent(getActivity(), CancelOrder.class);
+                                        intent.putExtra("oid", model.getOrderid());
+                                        startActivity(intent);
+
+                                    }
+                                }
+
+                            });builder.show();
+
+                        }
+                    });
 
                     deliveryRef.child(deliveryId).addValueEventListener(new ValueEventListener() {
                         @Override

@@ -160,7 +160,7 @@
     <string name="text_product2">Toblerone</string>
     <string name="text_quantity2">4</string>
     <string name="text_price2">LKR 1000.00</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="text_save">save</string>
 
@@ -185,19 +185,7 @@
 
     <string name="back">Back</string>
     <string name="title_activity_deliver_to">DeliverTo</string>
-    <!--
-    This string is used for square devices and overridden by hello_world in
-    values-round/strings.xml for round devices.
-    -->
-    <string name="hello_world">Hello Square World!</string>
-    <string name="title_activity_main3">MainActivity3</string>
-    <string name="title_activity_main4">MainActivity4</string>
-    <string name="text_userGuide">User guide</string>
-    <string name="text_admin">Administrator</string>
-    <string name="text_customer">Customer</string>
-    <string name="text_tempMesage">(This interface is a temporary interface which is used to check the navigation.)</string>
-    <string name="title_activity_home">Home</string>
-    <string name="title_activity_gift_m_e_home">GiftME_home</string>
+
     <string name="Select">Choose An Occasion</string>
     <string name="productDets">Product Details</string>
     <string name="click">Click Below To Add An Image</string>
@@ -214,6 +202,54 @@
     <string name="itemsss">Items</string>
     <string name="accept">Accept</string>
     <string name="decline">Decline</string>
+    <string-array name="reasons">
+        <item>Change of mind</item>
+        <item>Delivery time is too long</item>
+        <item>Change of delivery address</item>
+    </string-array>
+    <string name="hello_world">Hello Square World!</string>
+    <string name="title_activity_main3">MainActivity3</string>
+    <string name="title_activity_main4">MainActivity4</string>
+    <string name="text_userGuide">User guide</string>
+    <string name="text_admin">Administrator</string>
+    <string name="text_customer">Customer</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_activity_gift_m_e_home">GiftME_home</string>
+    <string name="cancel_order_Cancel_order">Cancel order</string>
+    <string name="cancel_order_message">Please select your reason</string>
+    <string name="cancel_order_other_reasons">Other reasons</string>
+    <string name="cancel_order_go_to_home">Go to home</string>
+    <string name="login_text">Tired of typing? Use remember me.</string>
+    <string name="login_email">Email</string>
+    <string name="login_password">Password</string>
+    <string name="login_remember_me">Remember me</string>
+    <string name="login_forgot_password">Forgot password</string>
+    <string name="login_login">Login</string>
+    <string name="login_user_type">I am an admin</string>
+    <string name="cart_items_layout_product_name">Product name</string>
+    <string name="cart_items_layout_product_quantity">Product quantity</string>
+    <string name="cart_items_layout_product_price">Product price</string>
+    <string name="cart_total_price">Total price</string>
+    <string name="cart_checkout">Checkout</string>
+    <string name="checkout_heading">Confirm your shipping details</string>
+    <string name="checkout_name">Name</string>
+    <string name="checkout_phone_number">Phone number</string>
+    <string name="checkout_address">Address</string>
+    <string name="checkout_city">City</string>
+    <string name="checkout_postal_code">Postal code</string>
+    <string name="checkout_confirm">Confirm</string>
+    <string name="settings_close">Close</string>
+    <string name="settings_update">Update</string>
+    <string name="settings_change_profile">Change profile</string>
+    <string name="settings_user_name">User name</string>
+    <string name="settings_user_email">User email</string>
+    <string name="settings_user_phone">User phone</string>
+    <string name="settings_user_address">User address</string>
+    <string name="status_pending">Pending</string>
+    <string name="order_items_layout_quantity">Quantity</string>
+    <string name="orders_layout_address_city">Address, City</string>
+    <string name="orders_layout_date_time">Date, time</string>
+    <string name="product_items_layout">Product description</string>
 
 
     <string-array name="events">

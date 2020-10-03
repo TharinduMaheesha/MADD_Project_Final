@@ -14,15 +14,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Admin_view_order"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Admin_new_orders"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".ViewOrderProducts"></activity>
+        <activity android:name=".CancelOrder" />
+        <activity
+            android:name=".Admin_view_order"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Admin_new_orders"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Admin_order_home"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Admin_edit_product"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -35,7 +37,6 @@
         <activity
             android:name=".Admin_home"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity android:name=".ConfirmFinalOrder" />
         <activity android:name=".AdminAddNewProductsToOccasions" />
         <activity
@@ -56,11 +57,13 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".StartingActivity"
-            android:theme="@style/AppTheme.NoActionBar" ><intent-filter>
-        <action android:name="android.intent.action.MAIN" />
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter></activity>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".AdminCategory" />
     </application>
 
