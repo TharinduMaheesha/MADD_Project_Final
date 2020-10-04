@@ -31,7 +31,6 @@
             android:id="@+id/order_user_name"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
-
             android:layout_below="@+id/order_payment_status"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="10dp"
@@ -44,7 +43,6 @@
             android:id="@+id/order_phone"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
-
             android:layout_below="@+id/order_payment_status"
             android:layout_alignParentEnd="true"
             android:layout_marginLeft="5dp"
@@ -60,7 +58,6 @@
             android:id="@+id/order_total_price"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:layout_below="@+id/order_phone"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="15dp"
@@ -75,7 +72,6 @@
             android:id="@+id/order_user_address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:layout_below="@+id/order_total_price"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="10dp"
@@ -89,7 +85,6 @@
             android:id="@+id/order_date_time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:layout_below="@+id/order_user_address"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="10dp"

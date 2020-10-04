@@ -35,36 +35,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/app_login_text"
-        android:background="@drawable/input_design"
-        android:padding="17dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
         android:layout_marginTop="40dp"
-        android:inputType="textEmailAddress"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHint="@color/colorPrimaryDark"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/input_design"
         android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:padding="17dp"
+        android:textColor="#EDECF1"
+        android:textColorHint="#DDDDDD"
         android:textSize="17sp"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/login_password_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/login_email_input"
-        android:background="@drawable/input_design"
-        android:padding="17dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
         android:layout_marginTop="20dp"
-        android:inputType="textPassword"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHint="@color/colorPrimaryDark"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/input_design"
         android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="17dp"
+        android:textColor="#F3F3F3"
+        android:textColorHint="#E5E3EA"
         android:textSize="17sp"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
 
     <LinearLayout
         android:id="@+id/linear_layout_1"
@@ -77,31 +75,30 @@
 
         <com.rey.material.widget.CheckBox
             android:id="@+id/rememberMe_checkBox"
+            style="@style/Material.Drawable.CheckBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/Material.Drawable.CheckBox"
+            android:layout_below="@+id/login_password_input"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
             android:text="Remember me"
             android:textAllCaps="false"
-            android:textColor="@color/colorPrimaryDark"
-            android:gravity="center_vertical"
+            android:textColor="#F3F3F3"
             android:textSize="17sp"
-            android:textStyle="bold"
-            android:layout_marginLeft="17dp"
-            android:layout_below="@+id/login_password_input"
-            android:layout_marginTop="20dp"
-            />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/forget_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/rememberMe_checkBox"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="20dp"
             android:text="Forgot password?"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="#F3F3F3"
             android:textSize="17sp"
             android:textStyle="bold"
-            android:layout_marginLeft="80dp"
-            android:layout_below="@+id/rememberMe_checkBox"
-            android:layout_marginTop="20dp"
 
             />
 
@@ -129,31 +126,29 @@
         android:id="@+id/admin_panel_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="I am an admin"
-        android:layout_alignParentEnd="true"
-        android:textColor="#E77111"
-        android:textSize="17sp"
-        android:textStyle="bold"
-        android:layout_marginLeft="17dp"
         android:layout_below="@+id/login_btn"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="17dp"
         android:layout_marginTop="15dp"
         android:layout_marginRight="23dp"
-        />
+        android:text="I am an admin"
+        android:textColor="#F4F1EF"
+        android:textSize="17sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/not_admin_panel_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="I am a customer"
+        android:layout_below="@+id/login_btn"
         android:layout_alignParentStart="true"
-        android:textColor="#E77111"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="15dp"
+        android:text="I am a customer"
+        android:textColor="#F3F2F1"
         android:textSize="17sp"
         android:textStyle="bold"
-        android:layout_marginLeft="17dp"
-        android:layout_below="@+id/login_btn"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="25dp"
-        android:visibility="invisible"
-        />
+        android:visibility="invisible" />
 
 </RelativeLayout>

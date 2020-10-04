@@ -2,19 +2,17 @@ package com.example.madd_giftme_app.Model;
 
 public class AddProducts {
 
-    private String pid, pname, price, quantity, discount, image ;
-
+    private String pid, pname, price, quantity, discount ,image;
 
     public AddProducts() {
     }
 
-    public AddProducts(String pid, String pname, String price, String quantity, String discount, String image) {
+    public AddProducts(String pid, String pname, String price, String quantity, String discount) {
         this.pid = pid;
         this.pname = pname;
         this.price = price;
         this.quantity = quantity;
         this.discount = discount;
-        this.image = image;
     }
 
     public String getPid() {
@@ -56,7 +54,6 @@ public class AddProducts {
     public void setDiscount(String discount) {
         this.discount = discount;
     }
-
 
     public String getImage() {
         return image;

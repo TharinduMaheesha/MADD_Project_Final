@@ -160,7 +160,7 @@
     <string name="text_product2">Toblerone</string>
     <string name="text_quantity2">4</string>
     <string name="text_price2">LKR 1000.00</string>
-
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="text_save">save</string>
 
@@ -185,7 +185,19 @@
 
     <string name="back">Back</string>
     <string name="title_activity_deliver_to">DeliverTo</string>
-
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="title_activity_main3">MainActivity3</string>
+    <string name="title_activity_main4">MainActivity4</string>
+    <string name="text_userGuide">User guide</string>
+    <string name="text_admin">Administrator</string>
+    <string name="text_customer">Customer</string>
+    <string name="text_tempMesage">(This interface is a temporary interface which is used to check the navigation.)</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_activity_gift_m_e_home">GiftME_home</string>
     <string name="Select">Choose An Occasion</string>
     <string name="productDets">Product Details</string>
     <string name="click">Click Below To Add An Image</string>
@@ -202,7 +214,6 @@
     <string name="itemsss">Items</string>
     <string name="accept">Accept</string>
     <string name="decline">Decline</string>
-
     <string name="acceptedorder">Accepted Orders</string>
     <string name="payments">Payments</string>
     <string name="viewrder">View Order</string>

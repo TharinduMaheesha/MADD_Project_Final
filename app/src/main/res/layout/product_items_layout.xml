@@ -18,13 +18,13 @@
             android:id="@+id/product_name_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:text="Product name"
-            android:textAlignment="center"
-            android:textSize="20dp"
-            android:textStyle="bold"
+            android:textAlignment="textStart"
             android:textColor="#F54808"
-            />
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/product_image_card"

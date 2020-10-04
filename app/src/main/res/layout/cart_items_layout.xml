@@ -10,20 +10,29 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorPrimaryDark"
-
+        android:padding="10dp">
 
         <ImageView
             android:id="@+id/cart_image"
             android:layout_width="match_parent"
             android:layout_height="130dp"
+            android:layout_marginTop="5dp"
             android:layout_marginBottom="10dp"
-            />
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/cake" />
 
         <TextView
             android:id="@+id/cart_product_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
+            android:layout_below="@+id/cart_product_price"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="@string/cart_items_layout_product_name"
+            android:textColor="@android:color/white"
+            android:textSize="15dp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/cart_product_quantity"
@@ -38,7 +47,7 @@
             android:textAlignment="textEnd"
             android:textColor="@android:color/white"
             android:textSize="14dp"
-
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/cart_product_price"

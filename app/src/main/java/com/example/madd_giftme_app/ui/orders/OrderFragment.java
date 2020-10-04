@@ -14,7 +14,8 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.madd_giftme_app.Adapter.NestedFragmentAdapter;
-
+import com.example.madd_giftme_app.IT19210902.OrdersToPayFragment;
+import com.example.madd_giftme_app.IT19210902.PaidOrdersFragment;
 import com.example.madd_giftme_app.R;
 import com.google.android.material.tabs.TabLayout;
 
@@ -46,7 +47,12 @@ public class OrderFragment extends Fragment {
         tabLayout.setupWithViewPager(viewPager);
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
 
+            }
+
+            @Override
             public void onTabUnselected(TabLayout.Tab tab) {
 
             }
