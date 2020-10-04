@@ -3,9 +3,13 @@ package com.example.madd_giftme_app.ViewHolder;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.madd_giftme_app.R;
+
 
 public class OrdersViewHolder extends RecyclerView.ViewHolder {
 
@@ -23,6 +27,5 @@ public class OrdersViewHolder extends RecyclerView.ViewHolder {
         showOrdersProducts = itemView.findViewById(R.id.display_orders_list);
         message = itemView.findViewById(R.id.order_payment_status);
 
-    }
 
 }

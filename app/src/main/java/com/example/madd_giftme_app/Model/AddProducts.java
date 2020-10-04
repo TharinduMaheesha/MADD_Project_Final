@@ -4,6 +4,7 @@ public class AddProducts {
 
     private String pid, pname, price, quantity, discount, image ;
 
+
     public AddProducts() {
     }
 
@@ -56,7 +57,12 @@ public class AddProducts {
         this.discount = discount;
     }
 
-    public String getImage() { return image; }
 
-    public void setImage(String image) { this.image = image; }
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 }

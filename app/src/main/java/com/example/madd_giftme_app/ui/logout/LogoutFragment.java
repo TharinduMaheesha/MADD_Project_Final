@@ -23,12 +23,12 @@ import com.example.madd_giftme_app.ui.home.HomeFragment;
 
 public class LogoutFragment extends Fragment {
 
-    private LogoutViewModel logoutViewModel;
+    private LogoutViewModel llogoutViewModel;
 
     public View onCreateView(@NonNull final LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        logoutViewModel =
+        llogoutViewModel =
                 ViewModelProviders.of(this).get(LogoutViewModel.class);
         View root = inflater.inflate(R.layout.fragment_logout, container, false);
 

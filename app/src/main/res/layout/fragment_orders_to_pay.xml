@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/background_image"
+tools:context=".IT19210902.OrdersToPayFragment">
+
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/order_list"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_image"
-    tools:context=".OrdersToPayFragment">
+    android:layout_below="@+id/relative_layout_1"
+    android:layout_above="@+id/next_process_button"
+    android:layout_marginTop="70dp"
+    >
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/order_list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/relative_layout_1"
-        android:layout_above="@+id/next_process_button"
-        android:layout_marginTop="70dp"
-        >
-
-    </androidx.recyclerview.widget.RecyclerView>
+</androidx.recyclerview.widget.RecyclerView>
 
 </RelativeLayout>

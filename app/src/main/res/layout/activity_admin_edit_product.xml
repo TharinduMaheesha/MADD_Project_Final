@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#DCDCDC"
-    tools:context=".Admin_edit_product">
+    android:backgroundTint="#E1DBDB"
+    tools:context=".IT19162706.Admin_edit_product">
 
     <RelativeLayout
         android:id="@+id/RLHEADER"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#0054BA">
+        android:background="#E3CC66">
 
         <TextView
             android:id="@+id/textView7"
@@ -20,7 +20,7 @@
             android:layout_marginTop="10dp"
             android:text="@string/btn_EditDetails"
             android:textAlignment="center"
-            android:textColor="#FFFFFF"
+            android:textColor="#000000"
             android:textSize="24sp"
             android:textStyle="bold" />
     </RelativeLayout>
@@ -31,7 +31,7 @@
         android:layout_above="@+id/LNNAV"
         android:layout_below="@+id/RLHEADER"
         android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp">
+        android:layout_marginBottom="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -62,6 +62,7 @@
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginEnd="15dp"
+                    android:scaleType="centerCrop"
                     app:srcCompat="@drawable/addimage" />
 
                 <LinearLayout
@@ -78,15 +79,13 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="30dp"
                         android:layout_marginEnd="15dp"
-                        android:background="#3D5AFE"
-                        android:backgroundTint="#3D5AFE"
                         android:padding="5dp"
                         android:paddingStart="8dp"
                         android:paddingEnd="8dp"
                         android:text="@string/itemNameView"
                         android:textAlignment="center"
-                        android:textColor="#FFFFFF"
-                        android:textSize="18sp"
+                        android:textColor="#000000"
+                        android:textSize="24sp"
                         android:textStyle="bold|italic" />
 
                     <TextView
@@ -95,14 +94,12 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="30dp"
-                        android:background="#3D5AFE"
-                        android:backgroundTint="#3D5AFE"
                         android:padding="5dp"
                         android:paddingStart="8dp"
                         android:paddingEnd="8dp"
                         android:text="@string/itemNameView"
-                        android:textAlignment="center"
-                        android:textColor="#FFFFFF"
+                        android:textAlignment="viewStart"
+                        android:textColor="#000000"
                         android:textSize="18sp"
                         android:textStyle="bold|italic" />
 
@@ -125,14 +122,12 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="30dp"
-                        android:background="#3D5AFE"
-                        android:backgroundTint="#3D5AFE"
                         android:padding="5dp"
                         android:paddingStart="8dp"
                         android:paddingEnd="8dp"
                         android:text="@string/ItemPriceView"
-                        android:textAlignment="center"
-                        android:textColor="#FFFFFF"
+                        android:textAlignment="viewStart"
+                        android:textColor="#000000"
                         android:textSize="18sp"
                         android:textStyle="bold|italic" />
 
@@ -155,14 +150,12 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="30dp"
-                        android:background="#3D5AFE"
-                        android:backgroundTint="#3D5AFE"
                         android:padding="5dp"
                         android:paddingStart="8dp"
                         android:paddingEnd="8dp"
                         android:text="@string/productDets"
-                        android:textAlignment="center"
-                        android:textColor="#FFFFFF"
+                        android:textAlignment="viewStart"
+                        android:textColor="#000000"
                         android:textSize="18sp"
                         android:textStyle="bold|italic" />
 
@@ -185,14 +178,12 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="30dp"
-                        android:background="#3D5AFE"
-                        android:backgroundTint="#3D5AFE"
                         android:padding="5dp"
                         android:paddingStart="8dp"
                         android:paddingEnd="8dp"
                         android:text="@string/occasion"
-                        android:textAlignment="center"
-                        android:textColor="#FFFFFF"
+                        android:textAlignment="viewStart"
+                        android:textColor="#000000"
                         android:textSize="18sp"
                         android:textStyle="bold|italic" />
 
@@ -212,14 +203,12 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="30dp"
-                        android:background="#3D5AFE"
-                        android:backgroundTint="#3D5AFE"
                         android:padding="5dp"
                         android:paddingStart="8dp"
                         android:paddingEnd="8dp"
                         android:text="@string/availabale"
-                        android:textAlignment="center"
-                        android:textColor="#FFFFFF"
+                        android:textAlignment="viewStart"
+                        android:textColor="#000000"
                         android:textSize="18sp"
                         android:textStyle="bold|italic" />
 
@@ -242,12 +231,11 @@
                         android:layout_marginEnd="15dp"
                         android:layout_marginBottom="30dp"
                         android:background="@drawable/buttons_admin"
-                        android:backgroundTint="#2979FF"
                         android:text="@string/AddProductSave"
-                        android:textColor="#FFFFFF" />
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp" />
 
                 </LinearLayout>
-
 
 
             </RelativeLayout>
@@ -261,13 +249,18 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="0dp"
-        android:background="#0054BA"
+        android:background="@android:color/darker_gray"
+        android:backgroundTint="#E3CC66"
         android:orientation="vertical">
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="5dp"
+            android:background="#E3CC66"
+            android:backgroundTint="#E3CC66"
             android:orientation="horizontal">
 
             <ImageButton
@@ -275,7 +268,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#0054BA"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
                 app:srcCompat="@drawable/home" />
 
             <ImageButton
@@ -283,7 +277,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#0054BA"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
                 app:srcCompat="@drawable/cart" />
 
             <ImageButton
@@ -291,7 +286,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#0054BA"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
                 app:srcCompat="@drawable/occasion" />
 
             <ImageButton
@@ -299,7 +295,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#0054BA"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
                 app:srcCompat="@drawable/account" />
         </LinearLayout>
 
@@ -307,6 +304,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="10dp"
+            android:background="#E3CC66"
+            android:backgroundTint="#E3CC66"
             android:orientation="horizontal">
 
             <TextView
@@ -316,9 +315,11 @@
                 android:layout_marginStart="12dp"
                 android:layout_marginEnd="-5dp"
                 android:layout_weight="0.25"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
                 android:text="@string/menu_home"
                 android:textAlignment="center"
-                android:textColor="#FFFFFF"
+                android:textColor="#090909"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -328,9 +329,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
                 android:layout_weight="0.25"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
                 android:text="@string/View_orders"
                 android:textAlignment="center"
-                android:textColor="#FFFFFF"
+                android:textColor="#090909"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -340,9 +343,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_weight="0.25"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
                 android:text="@string/prod_interface"
                 android:textAlignment="center"
-                android:textColor="#FFFFFF"
+                android:textColor="#090909"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -352,9 +357,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_weight="0.25"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
                 android:text="@string/view_account"
                 android:textAlignment="center"
-                android:textColor="#FFFFFF"
+                android:textColor="#090909"
                 android:textSize="14sp"
                 android:textStyle="bold" />
         </LinearLayout>

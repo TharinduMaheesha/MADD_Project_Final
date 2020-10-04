@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Admin_products">
+    android:background="#E1DBDB"
+    tools:context=".IT19162706.Admin_products">
 
     <RelativeLayout
         android:id="@+id/RLHEADER"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#0054BA">
+        android:background="#E3CC66">
 
         <TextView
             android:id="@+id/textProducts"
@@ -19,37 +20,83 @@
             android:layout_marginTop="10dp"
             android:text="@string/text_products"
             android:textAlignment="center"
-            android:textColor="#FFFFFF"
+            android:textColor="#000000"
             android:textSize="24sp"
             android:textStyle="bold" />
 
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/SEARCHBUTTON"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="33dp"
+            android:clickable="true"
+            app:backgroundTint="#FFFFFF"
+            app:fabSize="mini"
+            app:srcCompat="@drawable/searchg" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/CLOSESEARCH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="33dp"
+            android:clickable="true"
+            app:backgroundTint="#FFFFFF"
+            app:fabSize="mini"
+            app:srcCompat="@drawable/wrong" />
+
     </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/LNSEARCH"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RLHEADER"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/EDSEARCHINPUT"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_weight="0.9"
+            android:background="@drawable/stroke"
+            android:ems="10"
+            android:hint="@string/searchHint"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColorHint="#636262" />
+
+        <Button
+            android:id="@+id/BTNSEARCHCONFIRM"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="0.1"
+            android:backgroundTint="#000000"
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:padding="10dp"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/adminProductRecycler"
         android:layout_width="match_parent"
         android:layout_height="473dp"
-        android:layout_above="@+id/btn_add_new_admin"
-        android:layout_below="@+id/RLHEADER"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="10dp">
+        android:layout_above="@+id/LNNAV"
+        android:layout_below="@+id/LNSEARCH"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="-1dp"
+        android:layout_marginBottom="-3dp">
 
     </androidx.recyclerview.widget.RecyclerView>
-
-    <Button
-        android:id="@+id/btn_add_new_admin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/LNNAV"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/buttons_admin"
-        android:backgroundTint="#536DFE"
-        android:text="@string/AddNew"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        android:textStyle="normal|bold" />
 
     <LinearLayout
         android:id="@+id/LNNAV"
@@ -57,12 +104,16 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="0dp"
-        android:background="#0054BA"
+        android:background="#E3CC66"
+        android:backgroundTint="#E3CC66"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:background="#E3CC66"
+            android:backgroundTint="#E3CC66"
             android:orientation="horizontal">
 
             <ImageButton
@@ -70,7 +121,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#0054BA"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
                 app:srcCompat="@drawable/home" />
 
             <ImageButton
@@ -78,7 +130,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#0054BA"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
                 app:srcCompat="@drawable/cart" />
 
             <ImageButton
@@ -86,7 +139,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#0054BA"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
                 app:srcCompat="@drawable/occasion" />
 
             <ImageButton
@@ -94,7 +148,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#0054BA"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
                 app:srcCompat="@drawable/account" />
         </LinearLayout>
 
@@ -102,6 +157,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="10dp"
+            android:background="#E3CC66"
+            android:backgroundTint="#E3CC66"
             android:orientation="horizontal">
 
             <TextView
@@ -111,9 +168,11 @@
                 android:layout_marginStart="12dp"
                 android:layout_marginEnd="-5dp"
                 android:layout_weight="0.25"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
                 android:text="@string/menu_home"
                 android:textAlignment="center"
-                android:textColor="#FFFFFF"
+                android:textColor="#090909"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -123,9 +182,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
                 android:layout_weight="0.25"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
                 android:text="@string/View_orders"
                 android:textAlignment="center"
-                android:textColor="#FFFFFF"
+                android:textColor="#090909"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -135,9 +196,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_weight="0.25"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
                 android:text="@string/prod_interface"
                 android:textAlignment="center"
-                android:textColor="#FFFFFF"
+                android:textColor="#090909"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -147,12 +210,28 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_weight="0.25"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
                 android:text="@string/view_account"
                 android:textAlignment="center"
-                android:textColor="#FFFFFF"
+                android:textColor="#090909"
                 android:textSize="14sp"
                 android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_add_new_admin"
+        android:layout_width="78dp"
+        android:layout_height="71dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="97dp"
+        android:backgroundTint="#FB8C00"
+        android:clickable="true"
+        android:src="@drawable/addddddd"
+        app:backgroundTint="#F4511E"
+        app:fabSize="normal" />
 
 </RelativeLayout>

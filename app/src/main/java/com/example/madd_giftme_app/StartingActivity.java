@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.madd_giftme_app.Model.Users;
 import com.example.madd_giftme_app.Prevalent.Prevalent;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -22,7 +23,6 @@ import com.google.firebase.database.ValueEventListener;
 import io.paperdb.Paper;
 
 public class StartingActivity extends AppCompatActivity {
-
     private Button joinNowButton, loginButton ;
     private ProgressDialog loadingBar ;
 

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E1DBDB"
+    tools:context=".IT19210902.Admin_accepted_orders">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ACCEPTED_ORDER_ADMIN_RECYCLER"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/LNNAV"
+        android:layout_below="@+id/RLHEADER"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/RLHEADER"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E3CC66">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/acceptedorder"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/LNNAV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:background="#E3CC66"
+        android:backgroundTint="#E3CC66"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:background="#E3CC66"
+            android:backgroundTint="#E3CC66"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
+                app:srcCompat="@drawable/home" />
+
+            <ImageButton
+                android:id="@+id/btnOrders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
+                app:srcCompat="@drawable/cart" />
+
+            <ImageButton
+                android:id="@+id/btnProducts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
+                app:srcCompat="@drawable/occasion" />
+
+            <ImageButton
+                android:id="@+id/btnAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
+                app:srcCompat="@drawable/account" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:background="#E3CC66"
+            android:backgroundTint="#E3CC66"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="-5dp"
+                android:layout_weight="0.25"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
+                android:text="@string/menu_home"
+                android:textAlignment="center"
+                android:textColor="#090909"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_weight="0.25"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
+                android:text="@string/View_orders"
+                android:textAlignment="center"
+                android:textColor="#090909"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="0.25"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
+                android:text="@string/prod_interface"
+                android:textAlignment="center"
+                android:textColor="#090909"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="0.25"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
+                android:text="@string/view_account"
+                android:textAlignment="center"
+                android:textColor="#090909"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

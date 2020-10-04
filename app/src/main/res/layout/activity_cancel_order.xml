@@ -5,16 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_image"
-    tools:context=".CancelOrder">
+
 
     <RelativeLayout
         android:id="@+id/cancel_order_relative_layout"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#F54808"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="10dp"
+
         android:layout_marginBottom="10dp"
         android:layout_alignParentTop="true">
 
@@ -23,6 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
+
             android:text="@string/cancel_order_Cancel_order"
             android:textAlignment="center"
             android:textColor="@android:color/white"
@@ -44,18 +42,19 @@
         android:textAllCaps="false"
         android:textColor="@android:color/black"
         android:textSize="20sp"
-        android:textStyle="bold" />
 
-    <Spinner
-        android:id="@+id/cancel_order_spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="15dp"
-        android:layout_below="@id/cancel_order_text"
-        android:layout_marginTop="60dp"
-        android:autofillHints="Select reason"
-        android:layout_marginLeft="25dp"
-        />
+        android:textStyle="bold|italic" />
+
+        <Spinner
+            android:id="@+id/cancel_order_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:layout_below="@id/cancel_order_text"
+            android:layout_marginTop="60dp"
+            android:autofillHints="Select reason"
+            android:layout_marginLeft="25dp"
+             />
 
     <EditText
         android:id="@+id/cancel_order_other_reasons"
@@ -71,6 +70,9 @@
     <Button
         android:id="@+id/cancel_order_button_confirm"
         android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
         android:layout_height="wrap_content"
         android:layout_above="@id/cancel_order_button_go_to_home"
         android:layout_centerHorizontal="true"
@@ -84,14 +86,13 @@
 
     <Button
         android:id="@+id/cancel_order_button_go_to_home"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/buttons"
-        android:padding="15dp"
+
         android:text="@string/cancel_order_go_to_home"
         android:textAllCaps="false"
         android:textColor="@android:color/white"

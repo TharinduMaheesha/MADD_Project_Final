@@ -2,7 +2,8 @@ package com.example.madd_giftme_app.Model;
 
 public class Delivery {
 
-    private String address, city, customerid, delivery_status, email, name, orderid, phone, postalCode ;
+
+    private String deliveryid , rider , name , phone , city , address , postalcode , orderid , delivery_status , email;
 
     public Delivery() {
     }
@@ -67,14 +68,28 @@ public class Delivery {
 
     public void setName(String name) {
         this.name = name;
+    public String getDeliveryid() {
+        return deliveryid;
     }
 
-    public String getOrderid() {
-        return orderid;
+    public void setDeliveryid(String deliveryid) {
+        this.deliveryid = deliveryid;
     }
 
-    public void setOrderid(String orderid) {
-        this.orderid = orderid;
+    public String getRider() {
+        return rider;
+    }
+
+    public void setRider(String rider) {
+        this.rider = rider;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getPhone() {
@@ -85,12 +100,36 @@ public class Delivery {
         this.phone = phone;
     }
 
-    public String getPostalCode() {
-        return postalCode;
+    public String getCity() {
+        return city;
     }
 
-    public void setPostalCode(String postalCode) {
-        this.postalCode = postalCode;
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPostalcode() {
+        return postalcode;
+    }
+
+    public void setPostalcode(String postalcode) {
+        this.postalcode = postalcode;
+    }
+
+    public String getOrderid() {
+        return orderid;
+    }
+
+    public void setOrderid(String orderid) {
+        this.orderid = orderid;
     }
 
 }

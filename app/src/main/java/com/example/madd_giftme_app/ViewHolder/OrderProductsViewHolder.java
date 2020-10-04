@@ -6,8 +6,11 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.madd_giftme_app.R;
 import com.example.madd_giftme_app.R;
 import com.example.madd_giftme_app.Service.ItemClickListener;
 
@@ -18,6 +21,7 @@ public class OrderProductsViewHolder extends RecyclerView.ViewHolder implements 
     public ImageView OrderProductImage ;
     public RelativeLayout OrdersProductsProduct ;
 
+
     public OrderProductsViewHolder(@NonNull View itemView) {
         super(itemView);
 
@@ -26,6 +30,7 @@ public class OrderProductsViewHolder extends RecyclerView.ViewHolder implements 
         txtOrderProductQuantity = itemView.findViewById(R.id.order_product_quantity);
         OrderProductImage = itemView.findViewById(R.id.order_products_image);
         OrdersProductsProduct = itemView.findViewById(R.id.order_products_product);
+
     }
 
     @Override
@@ -39,4 +44,5 @@ public class OrderProductsViewHolder extends RecyclerView.ViewHolder implements 
 
         this.itemClickListener = itemClickListener;
     }
+
 }

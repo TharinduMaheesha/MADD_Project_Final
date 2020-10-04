@@ -26,6 +26,7 @@ import io.paperdb.Paper;
 
 public class LoginActivity extends AppCompatActivity {
 
+
     private EditText inputUserEmail, inputPassword ;
     private Button loginButton ;
     private ProgressDialog loadingBar ;
@@ -126,25 +127,25 @@ public class LoginActivity extends AppCompatActivity {
 
                         if(usersData.getPassword().equals(password)){
 
-                           if(parentDbName.equals("Admins")){
+                            if(parentDbName.equals("Admins")){
 
-                               Toast.makeText(LoginActivity.this, "Logged in successfully!", Toast.LENGTH_SHORT).show();
-                               loadingBar.dismiss();
+                                Toast.makeText(LoginActivity.this, "Logged in successfully!", Toast.LENGTH_SHORT).show();
+                                loadingBar.dismiss();
 
-                               Intent intent = new Intent(LoginActivity.this, Admin_home.class);
-                               Prevalent.currentOnlineUser= usersData ;
-                               startActivity(intent);
-                           }
-                           else if(parentDbName.equals("Users")){
+                                Intent intent = new Intent(LoginActivity.this, Admin_home.class);
+                                Prevalent.currentOnlineUser= usersData ;
+                                startActivity(intent);
+                            }
+                            else if(parentDbName.equals("Users")){
 
-                               Toast.makeText(LoginActivity.this, "Logged in successfully!", Toast.LENGTH_SHORT).show();
-                               loadingBar.dismiss();
+                                Toast.makeText(LoginActivity.this, "Logged in successfully!", Toast.LENGTH_SHORT).show();
+                                loadingBar.dismiss();
 
-                               Intent intent = new Intent(LoginActivity.this, Home.class);
-                               Prevalent.currentOnlineUser= usersData ;
-                               startActivity(intent);
+                                Intent intent = new Intent(LoginActivity.this, Home.class);
+                                Prevalent.currentOnlineUser= usersData ;
+                                startActivity(intent);
 
-                           }
+                            }
                         }
                         else {
 
@@ -170,4 +171,6 @@ public class LoginActivity extends AppCompatActivity {
         });
 
     }
+
+
 }

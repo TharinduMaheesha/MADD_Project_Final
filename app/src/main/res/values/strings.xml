@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MADD_GiftMe_App</string>
+    <string name="app_name">GiftMe</string>
     <string name="cake_name">Coffee cake</string>
     <string name="cake_description">Same design as shown in the image. Weight is 1 Kg.</string>
     <string name="cake_price">LKR 1800.00</string>
@@ -202,19 +202,60 @@
     <string name="itemsss">Items</string>
     <string name="accept">Accept</string>
     <string name="decline">Decline</string>
+
+    <string name="acceptedorder">Accepted Orders</string>
+    <string name="payments">Payments</string>
+    <string name="viewrder">View Order</string>
+    <string name="refunds">Refund Requests</string>
+    <string name="Account">Account</string>
+    <string name="Acount">Acount Details</string>
+    <string name="pwd">Enter Current Password</string>
+    <string name="pas">Current Passwod</string>
+    <string name="newpwd">Enter New Password</string>
+    <string name="repeatpwd">Re-Enter Password</string>
+    <string name="amil">Email</string>
+    <string name="hkjdaf">Enter Rider Name</string>
+    <string name="riderControl">Rider Control</string>
+    <string name="addrider">Add Rider</string>
+    <string name="vehive">Vehicle Plate Number</string>
+    <string name="licence">License</string>
+    <string name="vehicle">Vehicle Type</string>
+    <string name="ongoing">Ongoing Deliveries</string>
+    <string name="search">Search</string>
+    <string name="searchHint">Search here</string>
+
+
+    <string-array name="events">
+        <item>Valentines Day</item>
+        <item>Birthdays</item>
+        <item>Promotions</item>
+        <item>Parties</item>
+        <item>Bridal Shower</item>
+        <item>Weddings</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="vehicles">
+        <item>Car</item>
+        <item>Van</item>
+        <item>Bike</item>
+        <item>Three Wheeler</item>
+        <item>Mini van</item>
+
+
+    </string-array>
+    <string-array name="prodStatus">
+        <item>Available</item>
+        <item>Not Available</item>
+    </string-array>
+
+
     <string-array name="reasons">
         <item>Change of mind</item>
         <item>Delivery time is too long</item>
         <item>Change of delivery address</item>
     </string-array>
-    <string name="hello_world">Hello Square World!</string>
-    <string name="title_activity_main3">MainActivity3</string>
-    <string name="title_activity_main4">MainActivity4</string>
-    <string name="text_userGuide">User guide</string>
-    <string name="text_admin">Administrator</string>
-    <string name="text_customer">Customer</string>
-    <string name="title_activity_home">Home</string>
-    <string name="title_activity_gift_m_e_home">GiftME_home</string>
+
     <string name="cancel_order_Cancel_order">Cancel order</string>
     <string name="cancel_order_message">Please select your reason</string>
     <string name="cancel_order_other_reasons">Other reasons</string>
@@ -250,21 +291,6 @@
     <string name="orders_layout_address_city">Address, City</string>
     <string name="orders_layout_date_time">Date, time</string>
     <string name="product_items_layout">Product description</string>
+    <string name="user_settings_change_password">Want to change the password?</string>
     <string name="checkout_total_amount">"Total amount : "</string>
-
-
-    <string-array name="events">
-        <item>Valentines Day</item>
-        <item>Birthdays</item>
-        <item>Promotions</item>
-        <item>Parties</item>
-        <item>Bridal Shower</item>
-        <item>Weddings</item>
-        <item>Other</item>
-
-    </string-array>
-    <string-array name="prodStatus">
-        <item>Available</item>
-        <item>Not Available</item>
-    </string-array>
 </resources>

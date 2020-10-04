@@ -31,89 +31,89 @@
             android:id="@+id/order_user_name"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:text="User name"
+
+            android:layout_below="@+id/order_payment_status"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/settings_user_name"
             android:textColor="@android:color/white"
             android:textSize="15dp"
-            android:layout_marginLeft="5dp"
-            android:textStyle="bold"
-            android:layout_below="@+id/order_payment_status"
-            android:layout_marginTop="10dp"
-            />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/order_phone"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
+
+            android:layout_below="@+id/order_payment_status"
             android:layout_alignParentEnd="true"
             android:layout_marginLeft="5dp"
-            android:text="Phone number"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:text="@string/checkout_phone_number"
             android:textAlignment="textEnd"
             android:textColor="@android:color/white"
             android:textSize="14dp"
-            android:layout_marginRight="5dp"
-            android:textStyle="bold"
-            android:layout_below="@+id/order_payment_status"
-            android:layout_marginTop="10dp"
-            />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/order_total_price"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Total price"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textAlignment="center"
+
+            android:layout_below="@+id/order_phone"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="15dp"
-            android:layout_below="@+id/order_phone"
             android:gravity="center"
-            />
+            android:text="@string/cart_total_price"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/order_user_address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Address, city"
-            android:textColor="@android:color/white"
-            android:textSize="14sp"
-            android:textAlignment="center"
+
+            android:layout_below="@+id/order_total_price"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="10dp"
-            android:layout_below="@+id/order_total_price"
             android:gravity="center"
-            />
+            android:text="@string/orders_layout_address_city"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/order_date_time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Date, time"
-            android:textColor="@android:color/white"
-            android:textSize="14sp"
-            android:textAlignment="center"
+
+            android:layout_below="@+id/order_user_address"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="10dp"
-            android:layout_below="@+id/order_user_address"
             android:gravity="center"
-            />
+            android:text="@string/orders_layout_date_time"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
 
-        <!--        <Button-->
-        <!--            android:id="@+id/testingAnu123"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_below="@+id/order_date_time"-->
-        <!--            android:layout_marginTop="20dp"-->
-        <!--            android:layout_marginLeft="30dp"-->
-        <!--            android:layout_marginRight="30dp"-->
-        <!--            android:text="View products"-->
-        <!--            android:textColor="@color/colorPrimaryDark"-->
-        <!--            android:textSize="18sp"-->
-        <!--            android:textStyle="bold"-->
-        <!--            android:backgroundTint="@android:color/white"-->
-        <!--            android:background="@drawable/input_design_user_settings"-->
-        <!--            />-->
+<!--        <Button-->
+<!--            android:id="@+id/testingAnu123"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/order_date_time"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginLeft="30dp"-->
+<!--            android:layout_marginRight="30dp"-->
+<!--            android:text="View products"-->
+<!--            android:textColor="@color/colorPrimaryDark"-->
+<!--            android:textSize="18sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:backgroundTint="@android:color/white"-->
+<!--            android:background="@drawable/input_design_user_settings"-->
+<!--            />-->
 
     </RelativeLayout>
 
