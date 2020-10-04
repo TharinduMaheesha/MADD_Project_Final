@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_image"
-
     tools:context=".IT19210902.PaidOrdersFragment">
 
     <androidx.recyclerview.widget.RecyclerView

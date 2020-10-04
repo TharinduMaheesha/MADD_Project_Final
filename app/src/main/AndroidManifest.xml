@@ -14,7 +14,28 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
+        <activity android:name=".IT19210902.ViewOrderProducts"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".IT19210902.CancelOrder"
+        android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".IT19220116.Admin_edit_rider"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".IT19220116.Admin_delivered_activity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".IT19220116.Admin_ongoing_deliveries"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".IT19220116.Admin_Add_rider"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".IT19220116.Admin_view_riders"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".IT19210902.Admin_add_to_delivery"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".IT19220116.Admin_delivery_home"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".Admin_edit_account"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Admin_reset_password"
@@ -28,7 +49,38 @@
         <activity
             android:name=".IT19159386.view_refund"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".IT19159386.Payment_refund_requests"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".IT19159386.View_payments"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".IT19210902.Admin_accepted_orders"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".IT19210902.Admin_view_order"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".IT19210902.Admin_new_orders"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".IT19210902.Admin_order_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".IT19162706.Admin_edit_product"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".IT19162706.Admin_add_new_product"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".IT19162706.Admin_products"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Admin_home"
+            android:theme="@style/AppTheme.NoActionBar">
 
+        </activity>
         <activity android:name=".ConfirmFinalOrder" />
         <activity
             android:name=".CartActivity"
@@ -44,7 +96,16 @@
             android:name=".LoginActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:name=".StartingActivity"
+            android:noHistory="true"
+            android:theme="@style/AppTheme.NoActionBar" ><intent-filter>
+        <action android:name="android.intent.action.MAIN" />
 
+        <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter></activity>
+        <activity
+            android:name=".IT19220116.DeliveryControlGuide"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

@@ -40,30 +40,5 @@
         android:name="com.example.madd_giftme_app.ui.logout.LogoutFragment"
         android:label="Logout"
         tools:layout="@layout/fragment_logout" />
-    <fragment
-        android:id="@+id/checkoutFragment"
-        android:name="com.example.madd_giftme_app.CheckoutFragment"
-        android:label="fragment_checkout"
-        tools:layout="@layout/fragment_checkout" />
-    <fragment
-        android:id="@+id/ordersToPayFragment"
-        android:name="com.example.madd_giftme_app.OrdersToPayFragment"
-        android:label="fragment_orders_to_pay"
-        tools:layout="@layout/fragment_orders_to_pay" />
-    <fragment
-        android:id="@+id/paidOrdersFragment"
-        android:name="com.example.madd_giftme_app.PaidOrdersFragment"
-        android:label="fragment_paid_orders"
-        tools:layout="@layout/fragment_paid_orders" />
-    <fragment
-        android:id="@+id/adminProducts"
-        android:name="com.example.madd_giftme_app.AdminProducts"
-        android:label="fragment_admin_products"
-        tools:layout="@layout/fragment_admin_products" />
-    <fragment
-        android:id="@+id/viewOrderProductsFragment"
-        android:name="com.example.madd_giftme_app.ViewOrderProductsFragment"
-        android:label="fragment_view_order_products"
-        tools:layout="@layout/fragment_view_order_products" />
 
 </navigation>
