@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     android:backgroundTint="#FFFFFF"
-    tools:context=".BlankFragment">
+    tools:context=".IT19162706.BlankFragment">
 
 
     <LinearLayout

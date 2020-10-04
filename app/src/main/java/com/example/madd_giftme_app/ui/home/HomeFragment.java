@@ -1,7 +1,6 @@
 package com.example.madd_giftme_app.ui.home;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,11 +15,10 @@ import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.madd_giftme_app.BlankFragment;
 import com.example.madd_giftme_app.Model.Products;
 import com.example.madd_giftme_app.R;
 import com.example.madd_giftme_app.ViewHolder.ProductViewHolder;
-import com.example.madd_giftme_app.ViewProductDetails;
+import com.example.madd_giftme_app.IT19162706.ViewProductDetails;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;

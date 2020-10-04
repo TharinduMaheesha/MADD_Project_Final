@@ -23,7 +23,6 @@ import com.google.firebase.database.ValueEventListener;
 import io.paperdb.Paper;
 
 public class StartingActivity extends AppCompatActivity {
-
     private Button joinNowButton, loginButton ;
     private ProgressDialog loadingBar ;
 
@@ -31,7 +30,6 @@ public class StartingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_starting);
-
 
         joinNowButton = (Button) findViewById(R.id.main_join_now_btn);
         loginButton = (Button) findViewById(R.id.main_login_btn);
@@ -122,14 +120,6 @@ public class StartingActivity extends AppCompatActivity {
 
             }
         });
-
-
-    }
-    public void onBackPressed()
-    {
-        super.onBackPressed();
-        Intent i = new Intent(getApplicationContext(), StartingActivity.class);
-        startActivity(i);
 
 
     }

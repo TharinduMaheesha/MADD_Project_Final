@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".ViewProductDetails">
+    tools:context=".IT19162706.ViewProductDetails">
 
     <RelativeLayout
         android:id="@+id/REHEAder"
@@ -55,7 +55,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="25dp"
                 android:layout_marginEnd="10dp"
-                android:scaleType="centerCrop" />
+                android:scaleType="centerInside" />
 
             <TextView
                 android:id="@+id/event_details"
@@ -67,7 +67,7 @@
                 android:layout_marginEnd="10dp"
                 android:gravity="center"
                 android:text="@string/ItemPriceView"
-                android:textAlignment="viewStart"
+                android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -82,7 +82,7 @@
                 android:layout_marginEnd="10dp"
                 android:gravity="center"
                 android:text="Product description"
-                android:textAlignment="viewStart"
+                android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -97,7 +97,7 @@
                 android:layout_marginEnd="10dp"
                 android:gravity="center"
                 android:text="Product price"
-                android:textAlignment="viewStart"
+                android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />

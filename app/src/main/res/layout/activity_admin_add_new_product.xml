@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#E1DBDB"
     android:backgroundTint="#E1DBDB"
-    tools:context=".Admin_add_new_product">
+    tools:context=".IT19162706.Admin_add_new_product">
 
     <RelativeLayout
         android:id="@+id/RLHEADER"

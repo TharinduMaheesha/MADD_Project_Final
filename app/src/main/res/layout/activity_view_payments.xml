@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#E1DBDB"
     android:backgroundTint="#E1DBDB"
-    tools:context=".View_payments">
+    tools:context=".IT19159386.View_payments">
 
 
     <RelativeLayout

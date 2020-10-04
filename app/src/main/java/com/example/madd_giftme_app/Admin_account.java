@@ -11,13 +11,13 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.madd_giftme_app.IT19162706.Admin_products;
+import com.example.madd_giftme_app.IT19210902.Admin_order_home;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
-import io.paperdb.Paper;
 
 public class Admin_account extends AppCompatActivity {
 
@@ -41,7 +41,7 @@ public class Admin_account extends AppCompatActivity {
         products.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(),Admin_products.class);
+                Intent i = new Intent(getApplicationContext(), Admin_products.class);
                 startActivity(i);
             }
         });
@@ -55,7 +55,7 @@ public class Admin_account extends AppCompatActivity {
         orders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(),Admin_order_home.class);
+                Intent i = new Intent(getApplicationContext(), Admin_order_home.class);
                 startActivity(i);
             }
         });

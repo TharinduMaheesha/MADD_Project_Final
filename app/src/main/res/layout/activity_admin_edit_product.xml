@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:backgroundTint="#E1DBDB"
-    tools:context=".Admin_edit_product">
+    tools:context=".IT19162706.Admin_edit_product">
 
     <RelativeLayout
         android:id="@+id/RLHEADER"

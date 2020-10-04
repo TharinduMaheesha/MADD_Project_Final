@@ -11,12 +11,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.example.madd_giftme_app.BlankFragment;
-import com.example.madd_giftme_app.Customer_Occassion_products;
+import com.example.madd_giftme_app.IT19162706.BlankFragment;
+import com.example.madd_giftme_app.IT19162706.Customer_Occassion_products;
 import com.example.madd_giftme_app.R;
 
 public class OccasionsFragment extends Fragment {

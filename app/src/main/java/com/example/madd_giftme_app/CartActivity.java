@@ -3,7 +3,6 @@ package com.example.madd_giftme_app;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,9 +17,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.madd_giftme_app.IT19162706.ViewProductDetails;
+import com.example.madd_giftme_app.IT19162706.display_product_test;
 import com.example.madd_giftme_app.Model.AddProducts;
-import com.example.madd_giftme_app.Model.OrderItems;
-import com.example.madd_giftme_app.Prevalent.Prevalent;
 import com.example.madd_giftme_app.ViewHolder.AddProductsViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -30,9 +29,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 public class CartActivity extends AppCompatActivity {
 

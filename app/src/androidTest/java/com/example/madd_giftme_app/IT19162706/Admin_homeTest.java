@@ -6,8 +6,7 @@ import android.app.Instrumentation;
 import androidx.test.rule.ActivityTestRule;
 
 import com.example.madd_giftme_app.Admin_home;
-import com.example.madd_giftme_app.Admin_order_home;
-import com.example.madd_giftme_app.Admin_products;
+import com.example.madd_giftme_app.IT19210902.Admin_order_home;
 import com.example.madd_giftme_app.R;
 
 import org.junit.After;

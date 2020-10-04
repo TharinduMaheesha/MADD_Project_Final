@@ -29,20 +29,19 @@
             android:ems="10"
             android:hint="@string/searchHint"
             android:inputType="textPersonName"
-            android:padding="10dp"
+            android:padding="5dp"
             android:textColorHighlight="#FFFFFF"
             android:textColorHint="#F8F8F8" />
 
         <Button
             android:id="@+id/BTNHOMESEARCH"
-            android:layout_width="60dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_weight="1"
+            android:layout_weight="0"
             android:backgroundTint="#000000"
-            android:drawableRight="@android:drawable/ic_menu_search"
+            android:drawableStart="@android:drawable/ic_menu_search"
             android:padding="10dp"
-            android:text="@string/search"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -61,17 +60,6 @@
         android:src="@drawable/search__1_"
         app:backgroundTint="#FB8C00" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_menu_fr_home"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/LNSEARCHOME"
-        android:background="#F57C00"
-        android:backgroundTint="#F57C00"
-        android:scrollbars="vertical">
-
-    </androidx.recyclerview.widget.RecyclerView>
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/HOMESEARCCANCEL"
         android:layout_width="wrap_content"
@@ -83,5 +71,16 @@
         android:clickable="true"
         android:src="@drawable/wrong"
         app:backgroundTint="#FB8C00" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_menu_fr_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/LNSEARCHOME"
+        android:background="#F57C00"
+        android:backgroundTint="#F57C00"
+        android:scrollbars="vertical">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 </RelativeLayout>

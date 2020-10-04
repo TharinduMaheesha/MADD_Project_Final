@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#E1DBDB"
     android:backgroundTint="#E1DBDB"
-    tools:context=".Admin_view_riders">
+    tools:context=".IT19220116.Admin_view_riders">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/viewRiderRecycler"

@@ -1,35 +1,18 @@
 package com.example.madd_giftme_app.IT19162706;
 
-import android.content.Context;
-import android.content.Intent;
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 
-import com.example.madd_giftme_app.Admin_add_new_product;
-import com.example.madd_giftme_app.Admin_products;
-import com.example.madd_giftme_app.Model.AddProducts;
 import com.example.madd_giftme_app.Model.Products;
-import com.example.madd_giftme_app.StartingActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.FirebaseOptions;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Logger;
 
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.*;
 

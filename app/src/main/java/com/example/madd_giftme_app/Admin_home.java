@@ -6,10 +6,14 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.madd_giftme_app.IT19162706.Admin_products;
+import com.example.madd_giftme_app.IT19210902.Admin_order_home;
+import com.example.madd_giftme_app.IT19220116.Admin_view_riders;
+import com.example.madd_giftme_app.IT19220116.DeliveryControlGuide;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -48,7 +52,7 @@ public class Admin_home extends AppCompatActivity {
         products.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Admin_home.this,Admin_products.class);
+                Intent i = new Intent(Admin_home.this, Admin_products.class);
                 startActivity(i);
             }
         });
@@ -61,7 +65,7 @@ public class Admin_home extends AppCompatActivity {
         orders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Admin_home.this,Admin_order_home.class);
+                Intent i = new Intent(Admin_home.this, Admin_order_home.class);
                 startActivity(i);
             }
         });
@@ -77,7 +81,7 @@ public class Admin_home extends AppCompatActivity {
         cardrider.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Admin_home.this,Admin_view_riders.class);
+                Intent i = new Intent(Admin_home.this, Admin_view_riders.class);
                 startActivity(i);
             }
         });

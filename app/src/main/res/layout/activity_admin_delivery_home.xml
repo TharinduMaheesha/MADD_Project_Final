@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#E1DBDB"
     android:textAlignment="textStart"
-    tools:context=".Admin_delivery_home">
+    tools:context=".IT19220116.Admin_delivery_home">
 
     <RelativeLayout
         android:id="@+id/RLHEADER"

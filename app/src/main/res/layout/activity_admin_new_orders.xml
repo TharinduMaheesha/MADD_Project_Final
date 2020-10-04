@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#E1DBDB"
     android:backgroundTint="#E1DBDB"
-    tools:context=".Admin_new_orders">
+    tools:context=".IT19210902.Admin_new_orders">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/NEW_ORDER_ADMIN_RECYCLER"

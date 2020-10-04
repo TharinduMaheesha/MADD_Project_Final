@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.madd_giftme_app.IT19162706.display_product_test;
 import com.example.madd_giftme_app.Prevalent.Prevalent;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -28,13 +29,13 @@ public class ConfirmFinalOrder extends AppCompatActivity {
     private EditText nameEditText, phoneEditText, addressEditText, cityEditText, postalCodeEditText ;
     Button checkoutConfirmOrderButton ;
     private String totalAmount ;
-    HashMap some = new HashMap();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirm_final_order);
-        
+
         Intent intent = getIntent();
         Bundle args = intent.getBundleExtra("bundle");
          final HashMap test1 = (HashMap) args.getSerializable("items");
