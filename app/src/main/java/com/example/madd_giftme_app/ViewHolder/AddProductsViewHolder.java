@@ -1,6 +1,8 @@
 package com.example.madd_giftme_app.ViewHolder;
 
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -13,6 +15,8 @@ public class AddProductsViewHolder extends RecyclerView.ViewHolder implements Vi
 
     public TextView txtProductName, txtProductPrice, txtProductQuantity;
     private ItemClickListener itemClickListener ;
+    public CheckBox box;
+    public ImageView cartImage ;
 
     public AddProductsViewHolder(@NonNull View itemView) {
 
@@ -21,6 +25,8 @@ public class AddProductsViewHolder extends RecyclerView.ViewHolder implements Vi
         txtProductName = itemView.findViewById(R.id.cart_product_name);
         txtProductPrice = itemView.findViewById(R.id.cart_product_price);
         txtProductQuantity = itemView.findViewById(R.id.cart_product_quantity);
+       // box = itemView.findViewById(R.id.check);
+        cartImage = itemView.findViewById(R.id.cart_image);
     }
 
     @Override

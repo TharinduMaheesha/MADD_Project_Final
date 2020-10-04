@@ -4,14 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Admin_order_home">
+    android:background="#E1DBDB"
+    tools:context=".IT19210902.Admin_order_home">
 
 
     <RelativeLayout
         android:id="@+id/RLHEADER"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#0054BA">
+        android:background="#E3CC66"
+        android:backgroundTint="#E3CC66">
 
         <TextView
             android:id="@+id/textView7"
@@ -20,7 +22,7 @@
             android:layout_marginTop="10dp"
             android:text="@string/View_orders"
             android:textAlignment="center"
-            android:textColor="#FFFFFF"
+            android:textColor="#050505"
             android:textSize="24sp"
             android:textStyle="bold" />
     </RelativeLayout>
@@ -28,6 +30,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/LNNAV"
         android:layout_below="@+id/RLHEADER"
         android:layout_marginTop="10dp">
 
@@ -45,7 +48,8 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="5dp"
-                app:cardBackgroundColor="#CAC8C5">
+                android:background="@drawable/background_image"
+                app:cardBackgroundColor="#FFFFFF">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -66,7 +70,7 @@
                         android:layout_marginTop="50dp"
                         android:layout_toEndOf="@+id/imageView"
                         android:text="@string/neworder"
-                        android:textColor="#000000"
+                        android:textColor="#090909"
                         android:textSize="24sp"
                         android:textStyle="bold" />
                 </RelativeLayout>
@@ -80,7 +84,8 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="5dp"
-                app:cardBackgroundColor="#CAC8C5">
+                android:background="@drawable/background_image"
+                app:cardBackgroundColor="#FFFFFF">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -104,7 +109,7 @@
                         android:layout_marginTop="50dp"
                         android:layout_toEndOf="@+id/imageView2"
                         android:text="@string/Accepted"
-                        android:textColor="#000000"
+                        android:textColor="#090909"
                         android:textSize="24sp"
                         android:textStyle="bold" />
                 </RelativeLayout>
@@ -119,7 +124,8 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="5dp"
-                app:cardBackgroundColor="#CAC8C5">
+                android:background="@drawable/background_image"
+                app:cardBackgroundColor="#FFFFFF">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -143,7 +149,87 @@
                         android:layout_marginTop="50dp"
                         android:layout_toEndOf="@+id/imageView3"
                         android:text="@string/deli"
-                        android:textColor="#000000"
+                        android:textColor="#090909"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CARD_VIEWPAYMENTS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/background_image"
+                app:cardBackgroundColor="#FFFFFF">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/IV_PAYMENTS"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginBottom="25dp"
+                        app:srcCompat="@drawable/pay" />
+
+                    <TextView
+                        android:id="@+id/TV_PAYMENTS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="55dp"
+                        android:layout_marginTop="50dp"
+                        android:layout_toEndOf="@+id/IV_PAYMENTS"
+                        android:text="@string/payments"
+                        android:textColor="#090909"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CARD_REFUNDS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/background_image"
+                app:cardBackgroundColor="#FFFFFF">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/IBKJ"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginBottom="25dp"
+                        app:srcCompat="@drawable/ret" />
+
+                    <TextView
+                        android:id="@+id/TC_REFUNDS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="55dp"
+                        android:layout_marginTop="50dp"
+                        android:layout_toEndOf="@+id/IBKJ"
+                        android:text="@string/refunds"
+                        android:textColor="#090909"
                         android:textSize="24sp"
                         android:textStyle="bold" />
                 </RelativeLayout>
@@ -159,13 +245,16 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="0dp"
-        android:background="#0054BA"
+        android:background="#E3CC66"
+        android:backgroundTint="#E3CC66"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="5dp"
+            android:background="#E3CC66"
+            android:backgroundTint="#E3CC66"
             android:orientation="horizontal">
 
             <ImageButton
@@ -173,7 +262,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#0054BA"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
                 app:srcCompat="@drawable/home" />
 
             <ImageButton
@@ -181,7 +271,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#0054BA"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
                 app:srcCompat="@drawable/cart" />
 
             <ImageButton
@@ -189,7 +280,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#0054BA"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
                 app:srcCompat="@drawable/occasion" />
 
             <ImageButton
@@ -197,7 +289,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#0054BA"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
                 app:srcCompat="@drawable/account" />
         </LinearLayout>
 
@@ -205,6 +298,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="10dp"
+            android:background="#E3CC66"
+            android:backgroundTint="#E3CC66"
             android:orientation="horizontal">
 
             <TextView
@@ -214,9 +309,11 @@
                 android:layout_marginStart="12dp"
                 android:layout_marginEnd="-5dp"
                 android:layout_weight="0.25"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
                 android:text="@string/menu_home"
                 android:textAlignment="center"
-                android:textColor="#FFFFFF"
+                android:textColor="#090909"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -226,9 +323,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
                 android:layout_weight="0.25"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
                 android:text="@string/View_orders"
                 android:textAlignment="center"
-                android:textColor="#FFFFFF"
+                android:textColor="#090909"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -238,9 +337,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_weight="0.25"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
                 android:text="@string/prod_interface"
                 android:textAlignment="center"
-                android:textColor="#FFFFFF"
+                android:textColor="#090909"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -250,9 +351,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_weight="0.25"
+                android:background="#E3CC66"
+                android:backgroundTint="#E3CC66"
                 android:text="@string/view_account"
                 android:textAlignment="center"
-                android:textColor="#FFFFFF"
+                android:textColor="#090909"
                 android:textSize="14sp"
                 android:textStyle="bold" />
         </LinearLayout>

@@ -23,8 +23,6 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class Home extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-    DrawerLayout drawer;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +33,18 @@ public class Home extends AppCompatActivity {
         toolbar.setTitle("Home");
         setSupportActionBar(toolbar);
 
+//        FloatingActionButton fab = findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                FragmentManager fragmentManager = getSupportFragmentManager();
+//                CartFragment cartFragment = new CartFragment();
+//                fragmentManager.beginTransaction().replace(R.id.nav_host_fragment,cartFragment).commit();
+//            }
+//        });
 
-
-       drawer = findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.

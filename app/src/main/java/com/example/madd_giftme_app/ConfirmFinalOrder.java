@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.madd_giftme_app.IT19162706.display_product_test;
 import com.example.madd_giftme_app.Prevalent.Prevalent;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -20,6 +21,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 public class ConfirmFinalOrder extends AppCompatActivity {
 
@@ -27,10 +30,18 @@ public class ConfirmFinalOrder extends AppCompatActivity {
     Button checkoutConfirmOrderButton ;
     private String totalAmount ;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirm_final_order);
+
+        Intent intent = getIntent();
+        Bundle args = intent.getBundleExtra("bundle");
+         final HashMap test1 = (HashMap) args.getSerializable("items");
+
+
+
 
         totalAmount = getIntent().getStringExtra("Total price");
         Toast.makeText(this, "Total price : " + totalAmount + "LKR", Toast.LENGTH_SHORT).show();
@@ -46,7 +57,21 @@ public class ConfirmFinalOrder extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Check() ;
+                //Check() ;
+                DatabaseReference test = FirebaseDatabase.getInstance().getReference().child("OrderItems");
+                String oid = "OID05";
+
+                Iterator it = test1.entrySet().iterator();
+                while (it.hasNext()) {
+
+                    Map.Entry pair = (Map.Entry)it.next();
+                    test.child(pair.getKey()+oid).child("pid").setValue(pair.getKey());
+                    test.child(pair.getKey()+oid).child("quantity").setValue(pair.getValue());
+                    test.child(pair.getKey()+oid).child("orderid").setValue(pair.getValue());
+
+                    //  System.out.println(pair.getKey() + " = " + pair.getValue());
+                    it.remove(); // avoids a ConcurrentModificationException
+                }
 
             }
         });

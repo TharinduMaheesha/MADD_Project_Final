@@ -1,14 +1,19 @@
 package com.example.madd_giftme_app;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.madd_giftme_app.IT19162706.Admin_products;
+import com.example.madd_giftme_app.IT19210902.Admin_order_home;
+import com.example.madd_giftme_app.IT19220116.Admin_view_riders;
+import com.example.madd_giftme_app.IT19220116.DeliveryControlGuide;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -18,6 +23,7 @@ public class Admin_home extends AppCompatActivity {
     ImageButton home , account , products , orders;
     TextView date;
     String curDate;
+    CardView cardrider , cardGuide;
 
 
     @Override
@@ -31,6 +37,9 @@ public class Admin_home extends AppCompatActivity {
         orders = findViewById(R.id.btnOrders);
         date = findViewById(R.id.TV_DATE);
 
+        cardrider = findViewById(R.id.cardRider);
+        cardGuide = findViewById(R.id.cardGuide);
+
         Calendar calendar = Calendar.getInstance();
 
         SimpleDateFormat currentDate = new SimpleDateFormat("MMM dd, yyy");
@@ -43,7 +52,7 @@ public class Admin_home extends AppCompatActivity {
         products.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Admin_home.this,Admin_products.class);
+                Intent i = new Intent(Admin_home.this, Admin_products.class);
                 startActivity(i);
             }
         });
@@ -56,14 +65,42 @@ public class Admin_home extends AppCompatActivity {
         orders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Admin_home.this,Admin_order_home.class);
+                Intent i = new Intent(Admin_home.this, Admin_order_home.class);
                 startActivity(i);
+            }
+        });
+        account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Admin_home.this,Admin_account.class);
+                startActivity(i);
+            }
+        });
+
+
+        cardrider.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Admin_home.this, Admin_view_riders.class);
+                startActivity(i);
+            }
+        });
+
+        cardGuide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                guide();
             }
         });
 
 
 
 
+    }
 
+    public void guide () {
+        Intent intent = new Intent(this, DeliveryControlGuide.class);
+        startActivity(intent);
+        Toast.makeText(getApplicationContext(), "Use this guide for the first time", Toast.LENGTH_LONG).show();
     }
 }
