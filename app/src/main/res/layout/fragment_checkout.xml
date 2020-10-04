@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_image"
+
     tools:context=".IT19159386.CheckoutFragment">
 
     <TextView
@@ -41,8 +42,7 @@
     </TextView>
 
     <TextView
-        android:id="@+id/text_confirm_shipping_details"
-        android:layout_width="match_parent"
+        android:id="@+id/text_confirm_shipping_details"        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="80dp"

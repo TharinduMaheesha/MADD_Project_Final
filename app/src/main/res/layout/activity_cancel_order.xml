@@ -5,15 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_image"
-    tools:context=".IT19210902.CancelOrder">
+
 
     <RelativeLayout
         android:id="@+id/cancel_order_relative_layout"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="14dp"
+
         android:layout_marginBottom="10dp"
         android:layout_alignParentTop="true">
 
@@ -22,12 +20,13 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
-            android:background ="#F54808"
+
             android:text="@string/cancel_order_Cancel_order"
             android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="25sp"
             android:textStyle="bold"
+
             />
 
     </RelativeLayout>
@@ -43,6 +42,7 @@
         android:textAllCaps="false"
         android:textColor="@android:color/black"
         android:textSize="20sp"
+
         android:textStyle="bold|italic" />
 
         <Spinner
@@ -69,6 +69,7 @@
 
     <Button
         android:id="@+id/cancel_order_button_confirm"
+        android:layout_width="wrap_content"
         android:layout_width="match_parent"
         android:layout_marginRight="30dp"
         android:layout_marginLeft="30dp"
@@ -85,16 +86,13 @@
 
     <Button
         android:id="@+id/cancel_order_button_go_to_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
+
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/buttons"
-        android:padding="17dp"
+
         android:text="@string/cancel_order_go_to_home"
         android:textAllCaps="false"
         android:textColor="@android:color/white"

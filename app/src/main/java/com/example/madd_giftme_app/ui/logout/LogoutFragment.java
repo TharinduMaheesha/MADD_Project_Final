@@ -25,7 +25,7 @@ public class LogoutFragment extends Fragment {
 
     private LogoutViewModel llogoutViewModel;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
+    public View onCreateView(@NonNull final LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
         llogoutViewModel =

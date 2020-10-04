@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    tools:context=".ViewOrderProducts">
+
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_order_products_heading"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/order_products_heading"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Order products"
+            android:gravity="center"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:textSize="22sp"
+            android:background="@drawable/input_design_inside_app"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+
+            />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/view_products_product_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/order_products_button_go_to_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/buttons"
+        android:layout_alignParentBottom="true"
+        android:text="  Go to home "
+        android:layout_marginBottom="20dp"
+        android:textAllCaps="false"
+        android:padding="15dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        >
+    </Button>
+
+</RelativeLayout>

@@ -4,17 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_image"
-
-    tools:context=".IT19210902.PaidOrdersFragment">
+    tools:context=".ViewOrderProductsFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/order_list"
+        android:id="@+id/view_products_product_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/relative_layout_1"
-        android:layout_above="@+id/next_process_button"
-        android:layout_marginTop="70dp"
         >
+
     </androidx.recyclerview.widget.RecyclerView>
 
 </RelativeLayout>

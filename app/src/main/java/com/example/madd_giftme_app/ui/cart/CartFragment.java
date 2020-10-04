@@ -17,11 +17,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.madd_giftme_app.Home;
-import com.example.madd_giftme_app.IT19162706.ViewProductDetails;
-import com.example.madd_giftme_app.IT19159386.CheckoutFragment;
-import com.example.madd_giftme_app.Model.AddProducts;
-import com.example.madd_giftme_app.Prevalent.Prevalent;
 import com.example.madd_giftme_app.R;
 import com.example.madd_giftme_app.ViewHolder.AddProductsViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -40,7 +35,11 @@ import java.util.HashMap;
 
 public class CartFragment extends Fragment {
 
-    private CartViewModel cartViewModel;
+    private View cartView ;
+    private RecyclerView recyclerView ;
+    private Button nextProcessButton ;
+    private TextView txtTotalAmount, textmsg1, textmsg2 ;
+    public Double totalPrice = 0.00 ;
 
         private View cartView ;
         private RecyclerView recyclerView ;
@@ -51,6 +50,7 @@ public class CartFragment extends Fragment {
         public HashMap items;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
+
                                  ViewGroup container, Bundle savedInstanceState) {
 
             cartView = inflater.inflate(R.layout.fragment_cart, container, false);

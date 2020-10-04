@@ -6,6 +6,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -19,7 +20,7 @@ public class OrderProductsViewHolder extends RecyclerView.ViewHolder implements 
     private ItemClickListener itemClickListener ;
     public ImageView OrderProductImage ;
     public RelativeLayout OrdersProductsProduct ;
-    public CardView card;
+
 
     public OrderProductsViewHolder(@NonNull View itemView) {
         super(itemView);
