@@ -2,13 +2,12 @@ package com.example.madd_giftme_app;
 
 import android.app.Instrumentation;
 
-import androidx.test.ext.junit.rules.ActivityScenarioRule;
-
+import android.app.Instrumentation;
+import androidx.test.rule.ActivityTestRule;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
-
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
@@ -17,8 +16,7 @@ import static org.junit.Assert.*;
 public class ViewOrderProductsTest {
 
     @Rule
-    public ActivityScenarioRule activityScenarioRule = new ActivityScenarioRule(ViewOrderProducts.class);
-    private Class<? extends ActivityScenarioRule> viewOrderProducts = null ;
+    public ActivityTestRule<ViewOrderProducts> activityViewOrderProducts = new ActivityTestRule<ViewOrderProducts>(ViewOrderProducts.class);
     private ViewOrderProducts vActivity  = null ;
 
     Instrumentation.ActivityMonitor monitor = getInstrumentation().addMonitor(Home.class.getName(), null, false);
@@ -26,7 +24,7 @@ public class ViewOrderProductsTest {
     @Before
     public void setUp() throws Exception {
 
-        viewOrderProducts = activityScenarioRule.getClass();
+        vActivity = activityViewOrderProducts.getActivity();
     }
 
     @Test

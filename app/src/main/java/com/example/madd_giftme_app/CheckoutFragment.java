@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.madd_giftme_app.Prevalent.Prevalent;
@@ -26,43 +27,18 @@ import java.util.HashMap;
 
 public class CheckoutFragment extends Fragment {
 
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    private String mParam1;
-    private String mParam2;
-    private EditText nameEditText, phoneEditText, addressEditText, cityEditText, postalCodeEditText ;
-    Button checkoutConfirmOrderButton ;
+    private EditText nameEditText, phoneEditText, addressEditText, cityEditText, postalCodeEditText;
+    private TextView totalAmount ;
+    private Button checkoutConfirmOrderButton ;
     private Double totalCheckoutAmount = 0.00 ;
 
     public CheckoutFragment() {
-        // Required empty public constructor
-    }
-
-    public static CheckoutFragment newInstance(String param1, String param2) {
-        CheckoutFragment fragment = new CheckoutFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
 
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
 
         Bundle bundle = getArguments();
         if(bundle!=null){
@@ -71,7 +47,7 @@ public class CheckoutFragment extends Fragment {
 
         }
 
-        Toast.makeText(getActivity(), "Total amount is : " + totalCheckoutAmount, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getActivity(), "Total amount is : " + totalCheckoutAmount, Toast.LENGTH_SHORT).show();
 
         View v = inflater.inflate(R.layout.fragment_checkout, container, false) ;
 
@@ -81,6 +57,9 @@ public class CheckoutFragment extends Fragment {
         addressEditText = (EditText) v.findViewById(R.id.shipping_address);
         cityEditText = (EditText) v.findViewById(R.id.shipping_city);
         postalCodeEditText = (EditText) v.findViewById(R.id.city_postal_code);
+        totalAmount = (TextView) v.findViewById(R.id.checkout_total_amount);
+
+        totalAmount.setText(String.valueOf(totalCheckoutAmount)+" LKR");
 
         checkoutConfirmOrderButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,15 +76,19 @@ public class CheckoutFragment extends Fragment {
     private void Check() {
 
         if(TextUtils.isEmpty(nameEditText.getText().toString()))
-            Toast.makeText(getActivity(), "Please provide your name..", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Please provide the receiver's name..", Toast.LENGTH_SHORT).show();
         else if(TextUtils.isEmpty(phoneEditText.getText().toString()))
-            Toast.makeText(getActivity(), "Please provide your phone number..", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Please provide the receiver's phone number..", Toast.LENGTH_SHORT).show();
+        else if(TextUtils.getTrimmedLength(phoneEditText.getText().toString())!=10)
+            Toast.makeText(getActivity(), "Your phone number is incorrect. Enter 10 digits number..", Toast.LENGTH_SHORT).show();
         else if(TextUtils.isEmpty(addressEditText.getText().toString()))
-            Toast.makeText(getActivity(), "Please provide your address..", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Please provide the receiver's address..", Toast.LENGTH_SHORT).show();
         else if(TextUtils.isEmpty(cityEditText.getText().toString()))
-            Toast.makeText(getActivity(), "Please provide your city name..", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Please provide the receiver's city name..", Toast.LENGTH_SHORT).show();
         else if(TextUtils.isEmpty(postalCodeEditText.getText().toString()))
-            Toast.makeText(getActivity(), "Please provide your postal code..", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Please provide the receiver's city postal code..", Toast.LENGTH_SHORT).show();
+        else if(TextUtils.getTrimmedLength(postalCodeEditText.getText().toString())!=4)
+            Toast.makeText(getActivity(), "Provided postal code is incorrect..", Toast.LENGTH_SHORT).show();
         else {
 
             ConfirmOrder() ;
@@ -177,6 +160,7 @@ public class CheckoutFragment extends Fragment {
                     HashMap<String, Object> orderDeliveryMap = new HashMap<>();
 
                     orderDeliveryMap.put("orderid", orderid);
+                    orderDeliveryMap.put("deliveryid", deliveryid);
                     orderDeliveryMap.put("customerid", Prevalent.currentOnlineUser.getEmail());
                     orderDeliveryMap.put("name", nameEditText.getText().toString());
                     orderDeliveryMap.put("phone", phoneEditText.getText().toString());
@@ -185,9 +169,6 @@ public class CheckoutFragment extends Fragment {
                     orderDeliveryMap.put("city", cityEditText.getText().toString());
                     orderDeliveryMap.put("postalCode", postalCodeEditText.getText().toString());
                     orderDeliveryMap.put("delivery_status", "Pending");
-//                    orderDeliveryMap.put("totalPrice", String.valueOf(totalCheckoutAmount));
-//                    orderDeliveryMap.put("placed_date", saveCurrentDate);
-//                    orderDeliveryMap.put("placed_time", saveCurrentTime);
 
                     deliveryRef.updateChildren(orderDeliveryMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override

@@ -250,6 +250,7 @@
     <string name="orders_layout_address_city">Address, City</string>
     <string name="orders_layout_date_time">Date, time</string>
     <string name="product_items_layout">Product description</string>
+    <string name="checkout_total_amount">"Total amount : "</string>
 
 
     <string-array name="events">
